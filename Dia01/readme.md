@@ -43,6 +43,8 @@
 14. transaction	    
     - Groups search results into transactions.
 
+
+
 # Data and indexes
 **These commands can be used to learn more about your data, add and delete data sources, or manage the data in your summary indexes.**
 
@@ -70,21 +72,24 @@
 ## Manage data
 **These are some commands you can use to add data sources to or delete specific data from your indexes.**
 
-Command	Description
-delete	Delete specific events or search results.
-Manage summary indexes
-These commands are used to create and manage your summary indexes.
+21. delete	
+    - Delete specific events or search results.
 
-Command	Description
-collect, stash	Puts search results into a summary index.
-overlap	Finds events in a summary index that overlap in time or have missed events.
-sichart	Summary indexing version of chart. Computes the necessary information for you to later run a chart search on the summary index.
-sirare	Summary indexing version of rare. Computes the necessary information for you to later run a rare search on the summary index.
-sistats	Summary indexing version of stats. Computes the necessary information for you to later run a stats search on the summary index.
-sitimechart	Summary indexing version of timechart. Computes the necessary information for you to later run a timechart search on the summary index.
-sitop	Summary indexing version of top. Computes the necessary information for you to later run a top search on the summary index.
-Fields
-These are commands you can use to add, extract, and modify fields or field values. The most useful command for manipulating fields is eval and its statistical and charting functions.
+## Manage summary indexes
+**These commands are used to create and manage your summary indexes.**
+
+22. collect, stash	Puts search results into a summary index.
+23. overlap	Finds events in a summary index that overlap in time or have missed events.
+24. sichart	Summary indexing version of chart. Computes the necessary information for you to later run a chart search on the summary index.
+25. sirare	Summary indexing version of rare. Computes the necessary information for you to later run a rare search on the summary index.
+26. sistats	Summary indexing version of stats. Computes the necessary information for you to later run a stats search on the summary index.
+27. sitimechart	Summary indexing version of timechart. Computes the necessary information for you to later run a timechart search on the summary index.
+28. sitop	Summary indexing version of top. Computes the necessary information for you to later run a top search on the summary index.
+
+
+
+# Fields
+**These are commands you can use to add, extract, and modify fields or field values. The most useful command for manipulating fields is eval and its statistical and charting functions.**
 
 Add fields
 Use these commands to add new fields.
