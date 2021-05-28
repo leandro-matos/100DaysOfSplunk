@@ -1,41 +1,74 @@
 # Correlation
-These commands can be used to build correlation searches.
+**These commands can be used to build correlation searches.**
 
 1. append	    
    - Appends subsearch results to current results.
 
 2. appendcols	
     - Appends the fields of the subsearch results to current results, first results to first result, second to second, etc.
-    
-3. appendpipe	Appends the result of the subpipeline applied to the current result set to results.
-4. arules	    Finds association rules between field values.
-5. associate	Identifies correlations between fields.
-6. contingency, counttable, ctable	Builds a contingency table for two fields.
-7. correlate	Calculates the correlation between different fields.
-8. diff	        Returns the difference between two search results.
-9. join	        Combines the results from the main results pipeline with the results from a subsearch.
-10. lookup	    Explicitly invokes field value lookups.
-11. selfjoin	Joins results with itself.
-12. set	        Performs set operations (union, diff, intersect) on subsearches.
-13. stats	    Provides statistics, grouped optionally by fields. See Statistical and charting functions.
-14. transaction	    Groups search results into transactions.
 
-## Data and indexes
-These commands can be used to learn more about your data, add and delete data sources, or manage the data in your summary indexes.
+3. appendpipe	
+    - Appends the result of the subpipeline applied to the current result set to results.
+
+4. arules	    
+    - Finds association rules between field values.
+
+5. associate	
+    - Identifies correlations between fields.
+
+6. contingency, 
+    - counttable, ctable	Builds a contingency table for two fields.
+
+7. correlate	
+    - Calculates the correlation between different fields.
+
+8. diff	        
+    - Returns the difference between two search results.
+
+9. join	        
+    - Combines the results from the main results pipeline with the results from a subsearch.
+
+10. lookup	    
+    - Explicitly invokes field value lookups.
+
+11. selfjoin	
+    - Joins results with itself.
+
+12. set	        
+    - Performs set operations (union, diff, intersect) on subsearches.
+
+13. stats	    
+    - Provides statistics, grouped optionally by fields. See Statistical and charting functions.
+
+14. transaction	    
+    - Groups search results into transactions.
+
+# Data and indexes
+**These commands can be used to learn more about your data, add and delete data sources, or manage the data in your summary indexes.**
 
 ## View data
-These commands return information about the data you have in your indexes. They do not modify your data or indexes in any way.
+**These commands return information about the data you have in your indexes. They do not modify your data or indexes in any way.**
 
-* Command
-- [ ] audit	Returns audit trail information that is stored in the local audit index.
-- [ ] datamodel	Return information about a data model or data model object.
-- [ ] dbinspect	Returns information about the specified index.
-- [ ] eventcount	Returns the number of events in an index.
-- [ ] metadata	Returns a list of source, sourcetypes, or hosts from a specified index or distributed search peer.
-- [ ] typeahead	Returns typeahead information on a specified prefix.
+15. audit	
+    - Returns audit trail information that is stored in the local audit index.
 
-Manage data
-These are some commands you can use to add data sources to or delete specific data from your indexes.
+16. datamodel	
+    - Return information about a data model or data model object.
+
+17. dbinspect	
+    - Returns information about the specified index.
+
+18. eventcount	
+    - Returns the number of events in an index.
+
+19. metadata	
+    - Returns a list of source, sourcetypes, or hosts from a specified index or distributed search peer.
+
+20. typeahead	
+    - Returns typeahead information on a specified prefix.
+
+## Manage data
+**These are some commands you can use to add data sources to or delete specific data from your indexes.**
 
 Command	Description
 delete	Delete specific events or search results.
