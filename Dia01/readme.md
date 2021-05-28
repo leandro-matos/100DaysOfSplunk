@@ -1,8 +1,12 @@
 # Correlation
 These commands can be used to build correlation searches.
 
-1. append	    Appends subsearch results to current results.
-2. appendcols	Appends the fields of the subsearch results to current results, first results to first result, second to second, etc.
+1. append	    
+   - Appends subsearch results to current results.
+
+2. appendcols	
+    - Appends the fields of the subsearch results to current results, first results to first result, second to second, etc.
+    
 3. appendpipe	Appends the result of the subpipeline applied to the current result set to results.
 4. arules	    Finds association rules between field values.
 5. associate	Identifies correlations between fields.
