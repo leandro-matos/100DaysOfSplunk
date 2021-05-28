@@ -78,88 +78,175 @@
 ## Manage summary indexes
 **These commands are used to create and manage your summary indexes.**
 
-22. collect, stash	Puts search results into a summary index.
-23. overlap	Finds events in a summary index that overlap in time or have missed events.
-24. sichart	Summary indexing version of chart. Computes the necessary information for you to later run a chart search on the summary index.
-25. sirare	Summary indexing version of rare. Computes the necessary information for you to later run a rare search on the summary index.
-26. sistats	Summary indexing version of stats. Computes the necessary information for you to later run a stats search on the summary index.
-27. sitimechart	Summary indexing version of timechart. Computes the necessary information for you to later run a timechart search on the summary index.
-28. sitop	Summary indexing version of top. Computes the necessary information for you to later run a top search on the summary index.
+22. collect, stash	
+    - Puts search results into a summary index.
 
+23. overlap	
+    - Finds events in a summary index that overlap in time or have missed events.
+
+24. sichart	
+    - Summary indexing version of chart. Computes the necessary information for you to later run a chart search on the summary index.
+
+25. sirare	
+    - Summary indexing version of rare. Computes the necessary information for you to later run a rare search on the summary index.
+
+26. sistats	
+    - Summary indexing version of stats. Computes the necessary information for you to later run a stats search on the summary index.
+
+27. sitimechart	
+    - Summary indexing version of timechart. Computes the necessary information for you to later run a timechart search on the summary index.
+
+28. sitop	
+    - Summary indexing version of top. Computes the necessary information for you to later run a top search on the summary index.
 
 
 # Fields
 **These are commands you can use to add, extract, and modify fields or field values. The most useful command for manipulating fields is eval and its statistical and charting functions.**
 
-Add fields
-Use these commands to add new fields.
+## Add fields
+**Use these commands to add new fields.**
 
-Command	Description
-accum	Keeps a running total of the specified numeric field.
-addinfo	Add fields that contain common information about the current search.
-addtotals	Computes the sum of all numeric fields for each result.
-delta	Computes the difference in field value between nearby results.
-eval	Calculates an expression and puts the value into a field. See also, evaluation functions.
-iplocation	Adds location information, such as city, country, latitude, longitude, and so on, based on IP addresses.
-lookup	For configured lookup tables, explicitly invokes the field value lookup and adds fields from the lookup table to the events.
-multikv	Extracts field-values from table-formatted events.
-rangemap	Sets RANGE field to the name of the ranges that match.
-relevancy	Adds a relevancy field, which indicates how well the event matches the query.
-strcat	Concatenates string values and saves the result to a specified field.
-Extract fields
-These commands provide different ways to extract new fields from search results.
+29. accum	
+    - Keeps a running total of the specified numeric field.
 
-Command	Description
-erex	Allows you to specify example or counter example values to automatically extract fields that have similar values.
-extract, kv	Extracts field-value pairs from search results.
-kvform	Extracts values from search results, using a form template.
-rex	Specify a Perl regular expression named groups to extract fields while you search.
-spath	Provides a straightforward means for extracting fields from structured data formats, XML and JSON.
-xmlkv	Extracts XML key-value pairs.
-Modify fields and field values
-Use these commands to modify fields or their values.
+30. addinfo	
+    - Add fields that contain common information about the current search.
 
-Command	Description
-convert	Converts field values into numerical values.
-filldown	Replaces NULL values with the last non-NULL value.
-fillnull	Replaces null values with a specified value.
-makemv	Change a specified field into a multivalue field during a search.
-nomv	Changes a specified multivalue field into a single-value field at search time.
-reltime	Converts the difference between 'now' and '_time' to a human-readable value and adds adds this value to the field, 'reltime', in your search results.
-rename	Renames a specified field. Use wildcards to specify multiple fields.
-replace	Replaces values of specified fields with a specified new value.
-Find anomalies
-These commands are used to find anomalies in your data. Either search for uncommon or outlying events and fields or cluster similar events together.
+31. addtotals	
+    - Computes the sum of all numeric fields for each result.
 
-Command	Description
-analyzefields, af	Analyze numerical fields for their ability to predict another discrete field.
-anomalies	Computes an "unexpectedness" score for an event.
-anomalousvalue	Finds and summarizes irregular, or uncommon, search results.
-anomalydetection	Identifies anomalous events by computing a probability for each event and then detecting unusually small probabilities.
-cluster	Clusters similar events together.
-kmeans	Performs k-means clustering on selected fields.
-outlier	Removes outlying numerical values.
-rare	Displays the least common values of a field.
-Geographic and location
-These commands add geographical information to your search results.
+32. delta	
+    - Computes the difference in field value between nearby results.
 
-Command	Description
-iplocation	Returns location information, such as city, country, latitude, longitude, and so on, based on IP addresses.
-geom	Adds a field, named "geom", to each event. This field contains geographic data structures for polygon geometry in JSON and is used for choropleth map visualization. This command requires an external lookup with external_type=geo to be installed.
-geomfilter	Accepts two points that specify a bounding box for clipping choropleth maps. Points that fall outside of the bounding box are filtered out.
-geostats	Generate statistics which are clustered into geographical bins to be rendered on a world map.
-Metrics
-These commands work with metrics data.
+33. eval	
+    - Calculates an expression and puts the value into a field. See also, evaluation functions.
 
-Command	Description
-mcollect	Converts events into metric data points and inserts the data points into a metric index on the search head.
-meventcollect	Converts events into metric data points and inserts the data points into a metric index on indexer tier.
-mpreview, msearch	Provides samples of the raw metric data points in the metric time series in your metrics indexes. Helps you troubleshoot your metrics data.
-mstats	Calculates visualization-ready statistics for the measurement, metric_name, and dimension fields in metric indexes.
-Prediction and trending
-These commands predict future values and calculate trendlines that can be used to create visualizations.
+34. iplocation	
+    - Adds location information, such as city, country, latitude, longitude, and so on, based on IP addresses.
 
-Command	Description
+35. lookup	
+    - For configured lookup tables, explicitly invokes the field value lookup and adds fields from the lookup table to the events.
+
+36. multikv	
+    - Extracts field-values from table-formatted events.
+
+37. rangemap	
+    - Sets RANGE field to the name of the ranges that match.
+
+38. relevancy	
+    - Adds a relevancy field, which indicates how well the event matches the query.
+
+39. strcat	
+    - Concatenates string values and saves the result to a specified field.
+
+## Extract fields
+**These commands provide different ways to extract new fields from search results.**
+
+40. erex	
+    - Allows you to specify example or counter example values to automatically extract fields that have similar values.
+
+41. extract, kv	
+    - Extracts field-value pairs from search results.
+
+42. kvform	
+    - Extracts values from search results, using a form template.
+
+43. rex	
+    - Specify a Perl regular expression named groups to extract fields while you search.
+
+44. spath	
+    - Provides a straightforward means for extracting fields from structured data formats, XML and JSON.
+
+45. xmlkv
+    - Extracts XML key-value pairs.
+
+## Modify fields and field values
+**Use these commands to modify fields or their values.**
+
+46. convert	
+    - Converts field values into numerical values.
+
+47. filldown	
+    - Replaces NULL values with the last non-NULL value.
+
+48. fillnull	
+    - Replaces null values with a specified value.
+
+49. makemv	
+    - Change a specified field into a multivalue field during a search.
+
+50. nomv	
+    - Changes a specified multivalue field into a single-value field at search time.
+
+51. reltime	
+    - Converts the difference between 'now' and '_time' to a human-readable value and adds adds this value to the field, 'reltime', in your search results.
+
+52. rename	
+    - Renames a specified field. Use wildcards to specify multiple fields.
+
+53. replace	
+    - Replaces values of specified fields with a specified new value.
+
+# Find anomalies
+**These commands are used to find anomalies in your data. Either search for uncommon or outlying events and fields or cluster similar events together.**
+
+54. analyzefields, af	
+    - Analyze numerical fields for their ability to predict another discrete field.
+
+55. anomalies	
+    - Computes an "unexpectedness" score for an event.
+
+56. anomalousvalue	
+    - Finds and summarizes irregular, or uncommon, search results.
+
+57. anomalydetection	
+    - Identifies anomalous events by computing a probability for each event and then detecting unusually small probabilities.
+
+58. cluster	
+    - Clusters similar events together.
+
+59. kmeans	
+    - Performs k-means clustering on selected fields.
+
+60. outlier	
+    - Removes outlying numerical values.
+
+61. rare	
+    - Displays the least common values of a field.
+
+# Geographic and location
+**These commands add geographical information to your search results.**
+
+62. iplocation	
+    - Returns location information, such as city, country, latitude, longitude, and so on, based on IP addresses.
+
+63. geom	
+    - Adds a field, named "geom", to each event. This field contains geographic data structures for polygon geometry in JSON and is used for choropleth map visualization. This command requires an external lookup with external_type=geo to be installed.
+
+64. geomfilter	
+    - Accepts two points that specify a bounding box for clipping choropleth maps. Points that fall outside of the bounding box are filtered out.
+
+65. geostats	
+    - Generate statistics which are clustered into geographical bins to be rendered on a world map.
+
+# Metrics
+**These commands work with metrics data.**
+
+66. mcollect	
+    - Converts events into metric data points and inserts the data points into a metric index on the search head.
+
+67. meventcollect	
+    - Converts events into metric data points and inserts the data points into a metric index on indexer tier.
+
+68. mpreview, msearch	
+    - Provides samples of the raw metric data points in the metric time series in your metrics indexes. Helps you troubleshoot your metrics data.
+
+69. mstats	
+    - Calculates visualization-ready statistics for the measurement, metric_name, and dimension fields in metric indexes.
+
+# Prediction and trending
+**These commands predict future values and calculate trendlines that can be used to create visualizations.**
+
 predict	Enables you to use time series algorithms to predict future values of fields.
 trendline	Computes moving averages of fields.
 x11	Enables you to determine the trend in your data by removing the seasonal pattern.
