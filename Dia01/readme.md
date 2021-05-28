@@ -247,97 +247,184 @@
 # Prediction and trending
 **These commands predict future values and calculate trendlines that can be used to create visualizations.**
 
-predict	Enables you to use time series algorithms to predict future values of fields.
-trendline	Computes moving averages of fields.
-x11	Enables you to determine the trend in your data by removing the seasonal pattern.
+70. predict	
+    - Enables you to use time series algorithms to predict future values of fields.
 
-Reports
-These commands are used to build transforming searches. These commands return statistical data tables that are required for charts and other kinds of data visualizations.
+71. trendline	
+    - Computes moving averages of fields.
 
-Command	Description
-addtotals	Computes the sum of all numeric fields for each result.
-autoregress	Prepares your events for calculating the autoregression, or moving average, based on a field that you specify.
-bin, discretize	Puts continuous numerical values into discrete sets.
-chart	Returns results in a tabular output for charting. See also, Statistical and charting functions.
-contingency, counttable, ctable	Builds a contingency table for two fields.
-correlate	Calculates the correlation between different fields.
-eventcount	Returns the number of events in an index.
-eventstats	Adds summary statistics to all search results.
-gauge	Transforms results into a format suitable for display by the Gauge chart types.
-makecontinuous	Makes a field that is supposed to be the x-axis continuous (invoked by chart/timechart)
-mstats	Calculates statistics for the measurement, metric_name, and dimension fields in metric indexes.
-outlier	Removes outlying numerical values.
-rare	Displays the least common values of a field.
-stats	Provides statistics, grouped optionally by fields. See also, Statistical and charting functions.
-streamstats	Adds summary statistics to all search results in a streaming manner.
-timechart	Create a time series chart and corresponding table of statistics. See also, Statistical and charting functions.
-top	Displays the most common values of a field.
-trendline	Computes moving averages of fields.
-tstats	Performs statistical queries on indexed fields in tsidx files.
-untable	Converts results from a tabular format to a format similar to stats output. Inverse of xyseries and maketable.
-xyseries	Converts results into a format suitable for graphing.
-Results
-These commands can be used to manage search results. For example, you can append one set of results with another, filter more events from the results, reformat the results, and so on.
+72. x11	
+    - Enables you to determine the trend in your data by removing the seasonal pattern.
 
-Alerting
-Use this command to email the results of a search.
+# Reports
+**These commands are used to build transforming searches. These commands return statistical data tables that are required for charts and other kinds of data visualizations.**
 
-Command	Description
-sendemail	Emails search results, either inline or as an attachment, to one or more specified email addresses.
+73. addtotals	
+    - Computes the sum of all numeric fields for each result.
 
-Appending
-Use these commands to append one set of results with another set or to itself.
+74. autoregress	
+    - Prepares your events for calculating the autoregression, or moving average, based on a field that you specify.
 
-Command	Description
-append	Appends subsearch results to current results.
-appendcols	Appends the fields of the subsearch results to current results, first results to first result, second to second, and so on.
-join	SQL-like joining of results from the main results pipeline with the results from the subpipeline.
-selfjoin	Joins results with itself.
-Filtering
-Use these commands to remove more events or fields from your current results.
+75. bin, discretize	
+    - Puts continuous numerical values into discrete sets.
 
-Command	Description
-dedup	Removes subsequent results that match a specified criteria.
-fields	Removes fields from search results.
-from	Retrieves data from a dataset, such as a data model dataset, a CSV lookup, a KV Store lookup, a saved search, or a table dataset.
-mvcombine	Combines events in search results that have a single differing field value into one result with a multivalue field of the differing field.
-regex	Removes results that do not match the specified regular expression.
-searchtxn	Finds transaction events within specified search constraints.
-table	Creates a table using the specified fields.
-uniq	Removes any search that is an exact duplicate with a previous result.
-where	Performs arbitrary filtering on your data. See also, Evaluation functions.
-Formatting
-Use these commands to reformat your current results.
+76. chart	
+    - Returns results in a tabular output for charting. See also, Statistical and charting functions.
 
-Command	Description
-fieldformat	Uses eval expressions to change the format of field values when they are rendered without changing their underlying values. Does not apply to exported data.
-transpose	Reformats rows of search results as columns. Useful for fixing X- and Y-axis display issues with charts, or for turning sets of data into a series to produce a chart.
-untable	Converts results from a tabular format to a format similar to stats output. Inverse of xyseries and maketable.
-xyseries	Converts results into a format suitable for graphing.
-Generating
-Use these commands to generate or return events.
+77. contingency, counttable, ctable	
+    - Builds a contingency table for two fields.
 
-Command	Description
-gentimes	Returns results that match a time-range.
-loadjob	Loads events or results of a previously completed search job.
-makeresults	Creates a specified number of empty search results.
-mvexpand	Expands the values of a multivalue field into separate events for each value of the multivalue field.
-savedsearch	Returns the search results of a saved search.
-search	Searches indexes for matching events. This command is implicit at the start of every search pipeline that does not begin with another generating command.
-Grouping
-Use these commands to group or classify the current results.
+78. correlate	
+    - Calculates the correlation between different fields.
 
-Command	Description
+79. eventcount	
+    - Returns the number of events in an index.
+
+80. eventstats	
+    - Adds summary statistics to all search results.
+
+81. gauge	
+    - Transforms results into a format suitable for display by the Gauge chart types.
+
+82. makecontinuous	
+    - Makes a field that is supposed to be the x-axis continuous (invoked by chart/timechart)
+
+83. mstats	
+    - Calculates statistics for the measurement, metric_name, and dimension fields in metric indexes.
+
+84. outlier	
+    - Removes outlying numerical values.
+
+85. rare	
+    - Displays the least common values of a field.
+
+86. stats	
+    - Provides statistics, grouped optionally by fields. See also, Statistical and charting functions.
+
+87. streamstats	
+    - Adds summary statistics to all search results in a streaming manner.
+
+88. timechart	
+    - Create a time series chart and corresponding table of statistics. See also, Statistical and charting functions.
+
+89. top	
+    - Displays the most common values of a field.
+
+90. trendline	
+    - Computes moving averages of fields.
+
+91. tstats	
+    - Performs statistical queries on indexed fields in tsidx files.
+
+92. untable	
+    - Converts results from a tabular format to a format similar to stats output. Inverse of xyseries and maketable.
+
+93. xyseries	
+    - Converts results into a format suitable for graphing.
+
+# Results
+**These commands can be used to manage search results. For example, you can append one set of results with another, filter more events from the results, reformat the results, and so on.**
+
+## Alerting
+**Use this command to email the results of a search.**
+
+94. sendemail	
+    - Emails search results, either inline or as an attachment, to one or more specified email addresses.
+
+## Appending
+**Use these commands to append one set of results with another set or to itself.**
+
+95. append	
+    - Appends subsearch results to current results.
+
+96. appendcols	
+    - Appends the fields of the subsearch results to current results, first results to first result, second to second, and so on.
+
+97. join	
+    - SQL-like joining of results from the main results pipeline with the results from the subpipeline.
+
+98. selfjoin	
+    - Joins results with itself.
+
+## Filtering
+**Use these commands to remove more events or fields from your current results.**
+
+99.  dedup	
+    - Removes subsequent results that match a specified criteria.
+
+100. fields	
+    - Removes fields from search results.
+
+101. from	
+    - Retrieves data from a dataset, such as a data model dataset, a CSV lookup, a KV Store lookup, a saved search, or a table dataset.
+
+102. mvcombine	
+    - Combines events in search results that have a single differing field value into one result with a multivalue field of the differing field.
+
+103. regex	
+    - Removes results that do not match the specified regular expression.
+
+104. searchtxn	
+    - Finds transaction events within specified search constraints.
+
+105. table	
+    - Creates a table using the specified fields.
+
+106. uniq	
+    - Removes any search that is an exact duplicate with a previous result.
+
+107. where	
+    - Performs arbitrary filtering on your data. See also, Evaluation functions.
+
+## Formatting
+**Use these commands to reformat your current results.**
+
+108. fieldformat	
+    - Uses eval expressions to change the format of field values when they are rendered without changing their underlying values. Does not apply to exported data.
+
+109. transpose	
+    - Reformats rows of search results as columns. Useful for fixing X- and Y-axis display issues with charts, or for turning sets of data into a series to produce a chart.
+
+110. untable	
+    - Converts results from a tabular format to a format similar to stats output. Inverse of xyseries and maketable.
+
+111. xyseries	
+    - Converts results into a format suitable for graphing.
+
+## Generating
+**Use these commands to generate or return events.**
+
+112. gentimes	
+    - Returns results that match a time-range.
+
+113. loadjob	
+    - Loads events or results of a previously completed search job.
+
+114. makeresults	
+    - Creates a specified number of empty search results.
+
+115. mvexpand	
+    - Expands the values of a multivalue field into separate events for each value of the multivalue field.
+
+116. savedsearch	
+    - Returns the search results of a saved search.
+
+117. search	
+    - Searches indexes for matching events. This command is implicit at the start of every search pipeline that does not begin with another generating command.
+
+## Grouping
+**Use these commands to group or classify the current results.**
+
 cluster	Clusters similar events together.
 kmeans	Performs k-means clustering on selected fields.
 mvexpand	Expands the values of a multivalue field into separate events for each value of the multivalue field.
 transaction	Groups search results into transactions.
 typelearner	Generates suggested eventtypes.
 typer	Calculates the eventtypes for the search results.
+
 Reordering
 Use these commands to change the order of the current search results.
 
-Command	Description
 head	Returns the first number n of specified results.
 reverse	Reverses the order of the results.
 sort	Sorts search results by the specified fields.
@@ -345,14 +432,12 @@ tail	Returns the last number N of specified results
 Reading
 Use these commands to read in results from external files or previous searches.
 
-Command	Description
 inputcsv	Loads search results from the specified CSV file.
 inputlookup	Loads search results from a specified static lookup table.
 loadjob	Loads events or results of a previously completed search job.
 Writing
 Use these commands to define how to output current search results.
 
-Command	Description
 collect, stash	Puts search results into a summary index.
 meventcollect	Converts events into metric data points and inserts the data points into a metric index on indexer tier.
 mcollect	Converts events into metric data points and inserts the data points into a metric index on the search head.
@@ -361,7 +446,7 @@ outputlookup	Writes search results to the specified static lookup table.
 outputtext	Ouputs the raw text field (_raw) of results into the _xml field.
 sendemail	Emails search results, either inline or as an attachment, to one or more specified email addresses.
 Search
-Command	Description
+
 localop	Run subsequent commands, that is all commands following this, locally and not on a remote peer.
 map	A looping operator, performs a search over each search result.
 redistribute	Invokes parallel reduce search processing to shorten the search runtime of a set of supported SPL commands.
@@ -370,7 +455,6 @@ sendemail	Emails search results, either inline or as an attachment, to one or mo
 Subsearch
 These are commands that you can use with subsearches.
 
-Command	Description
 append	Appends subsearch results to current results.
 appendcols	Appends the fields of the subsearch results to current results, first results to first result, second to second, and so on.
 appendpipe	Appends the result of the subpipeline applied to the current result set to results.
@@ -382,7 +466,6 @@ set	Performs set operations (union, diff, intersect) on subsearches.
 Time
 Use these commands to search based on time ranges or add time information to your events.
 
-Command	Description
 gentimes	Returns results that match a time-range.
 localize	Returns a list of the time ranges in which the search results were found.
 reltime	Converts the difference between 'now' and '_time' to a human-readable value and adds adds this value to the field, 'reltime', in your search results.
