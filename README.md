@@ -1,1 +1,1 @@
-"# 100DaysOfSplunk" 
+# 100DaysOfSplunk
