@@ -1,4 +1,4 @@
-# Correlation
+# CORRELATION
 **These commands can be used to build correlation searches.**
 
 1. append	    
@@ -45,7 +45,7 @@
 
 
 
-# Data and indexes
+# DATA E INDEXES
 **These commands can be used to learn more about your data, add and delete data sources, or manage the data in your summary indexes.**
 
 ## View data
@@ -100,7 +100,7 @@
     - Summary indexing version of top. Computes the necessary information for you to later run a top search on the summary index.
 
 
-# Fields
+# FIELDS
 **These are commands you can use to add, extract, and modify fields or field values. The most useful command for manipulating fields is eval and its statistical and charting functions.**
 
 ## Add fields
@@ -187,7 +187,7 @@
 53. replace	
     - Replaces values of specified fields with a specified new value.
 
-# Find anomalies
+# FIND ANOMALIES
 **These commands are used to find anomalies in your data. Either search for uncommon or outlying events and fields or cluster similar events together.**
 
 54. analyzefields, af	
@@ -214,7 +214,7 @@
 61. rare	
     - Displays the least common values of a field.
 
-# Geographic and location
+# GEOGRAPHIC AND LOCATION
 **These commands add geographical information to your search results.**
 
 62. iplocation	
@@ -229,7 +229,7 @@
 65. geostats	
     - Generate statistics which are clustered into geographical bins to be rendered on a world map.
 
-# Metrics
+# METRICS
 **These commands work with metrics data.**
 
 66. mcollect	
@@ -244,7 +244,7 @@
 69. mstats	
     - Calculates visualization-ready statistics for the measurement, metric_name, and dimension fields in metric indexes.
 
-# Prediction and trending
+# PREDICTION AND TRENDING
 **These commands predict future values and calculate trendlines that can be used to create visualizations.**
 
 70. predict	
@@ -256,7 +256,7 @@
 72. x11	
     - Enables you to determine the trend in your data by removing the seasonal pattern.
 
-# Reports
+# REPORTS
 **These commands are used to build transforming searches. These commands return statistical data tables that are required for charts and other kinds of data visualizations.**
 
 73. addtotals	
@@ -322,7 +322,7 @@
 93. xyseries	
     - Converts results into a format suitable for graphing.
 
-# Results
+# RESULTS
 **These commands can be used to manage search results. For example, you can append one set of results with another, filter more events from the results, reformat the results, and so on.**
 
 ## Alerting
@@ -415,57 +415,127 @@
 ## Grouping
 **Use these commands to group or classify the current results.**
 
-cluster	Clusters similar events together.
-kmeans	Performs k-means clustering on selected fields.
-mvexpand	Expands the values of a multivalue field into separate events for each value of the multivalue field.
-transaction	Groups search results into transactions.
-typelearner	Generates suggested eventtypes.
-typer	Calculates the eventtypes for the search results.
+118. cluster	
+    - Clusters similar events together.
 
-Reordering
-Use these commands to change the order of the current search results.
+119. kmeans	
+    - Performs k-means clustering on selected fields.
 
-head	Returns the first number n of specified results.
-reverse	Reverses the order of the results.
-sort	Sorts search results by the specified fields.
-tail	Returns the last number N of specified results
-Reading
-Use these commands to read in results from external files or previous searches.
+120. mvexpand	
+    - Expands the values of a multivalue field into separate events for each value of the multivalue field.
 
-inputcsv	Loads search results from the specified CSV file.
-inputlookup	Loads search results from a specified static lookup table.
-loadjob	Loads events or results of a previously completed search job.
-Writing
-Use these commands to define how to output current search results.
+121. transaction	
+    - Groups search results into transactions.
 
-collect, stash	Puts search results into a summary index.
-meventcollect	Converts events into metric data points and inserts the data points into a metric index on indexer tier.
-mcollect	Converts events into metric data points and inserts the data points into a metric index on the search head.
-outputcsv	Outputs search results to a specified CSV file.
-outputlookup	Writes search results to the specified static lookup table.
-outputtext	Ouputs the raw text field (_raw) of results into the _xml field.
-sendemail	Emails search results, either inline or as an attachment, to one or more specified email addresses.
-Search
+122. typelearner	
+    - Generates suggested eventtypes.
 
-localop	Run subsequent commands, that is all commands following this, locally and not on a remote peer.
-map	A looping operator, performs a search over each search result.
-redistribute	Invokes parallel reduce search processing to shorten the search runtime of a set of supported SPL commands.
-search	Searches indexes for matching events. This command is implicit at the start of every search pipeline that does not begin with another generating command.
-sendemail	Emails search results, either inline or as an attachment, to one or more specified email addresses.
-Subsearch
-These are commands that you can use with subsearches.
+123. typer	
+    - Calculates the eventtypes for the search results.
 
-append	Appends subsearch results to current results.
-appendcols	Appends the fields of the subsearch results to current results, first results to first result, second to second, and so on.
-appendpipe	Appends the result of the subpipeline applied to the current result set to results.
-foreach	Runs a templated streaming subsearch for each field in a wildcarded field list.
-format	Takes the results of a subsearch and formats them into a single result.
-join	Combine the results of a subsearch with the results of a main search.
-return	Specify the values to return from a subsearch.
-set	Performs set operations (union, diff, intersect) on subsearches.
-Time
-Use these commands to search based on time ranges or add time information to your events.
+## Reordering
+**Use these commands to change the order of the current search results.**
 
-gentimes	Returns results that match a time-range.
-localize	Returns a list of the time ranges in which the search results were found.
-reltime	Converts the difference between 'now' and '_time' to a human-readable value and adds adds this value to the field, 'reltime', in your search results.
+124. head	
+    - Returns the first number n of specified results.
+
+125. reverse	
+    - Reverses the order of the results.
+
+126. sort	
+    - Sorts search results by the specified fields.
+
+127. tail	
+    - Returns the last number N of specified results
+
+## Reading
+**Use these commands to read in results from external files or previous searches.**
+
+128. inputcsv	
+    - Loads search results from the specified CSV file.
+
+129. inputlookup	
+    - Loads search results from a specified static lookup table.
+
+130. loadjob	
+    - Loads events or results of a previously completed search job.
+
+## Writing
+**Use these commands to define how to output current search results.**
+
+131. collect, stash	
+    - Puts search results into a summary index.
+
+132. meventcollect	
+    - Converts events into metric data points and inserts the data points into a metric index on indexer tier.
+
+133. mcollect	
+    - Converts events into metric data points and inserts the data points into a metric index on the search head.
+
+134. outputcsv	
+    - Outputs search results to a specified CSV file.
+
+135. outputlookup	
+    - Writes search results to the specified static lookup table.
+
+136. outputtext	
+    - Ouputs the raw text field (_raw) of results into the _xml field.
+
+137. sendemail	
+    - Emails search results, either inline or as an attachment, to one or more specified email addresses.
+
+# SEARCH
+
+138. localop	
+    - Run subsequent commands, that is all commands following this, locally and not on a remote peer.
+
+139. map	
+    - A looping operator, performs a search over each search result.
+
+140. redistribute	
+    - Invokes parallel reduce search processing to shorten the search runtime of a set of supported SPL commands.
+
+141. search	
+    - Searches indexes for matching events. This command is implicit at the start of every search pipeline that does not begin with another generating command.
+
+142. sendemail	
+    - Emails search results, either inline or as an attachment, to one or more specified email addresses.
+
+# SUBSEARCH
+**These are commands that you can use with subsearches.**
+
+143. append	
+    - Appends subsearch results to current results.
+
+144. appendcols	
+    - Appends the fields of the subsearch results to current results, first results to first result, second to second, and so on.
+
+145. appendpipe	
+    - Appends the result of the subpipeline applied to the current result set to results.
+
+146. foreach	
+    - Runs a templated streaming subsearch for each field in a wildcarded field list.
+
+147. format	
+    - Takes the results of a subsearch and formats them into a single result.
+
+148. join	
+    - Combine the results of a subsearch with the results of a main search.
+
+149. return	
+    - Specify the values to return from a subsearch.
+
+150. set	
+    - Performs set operations (union, diff, intersect) on subsearches.
+
+# TIME 
+**Use these commands to search based on time ranges or add time information to your events.**
+
+151. gentimes	
+    - Returns results that match a time-range.
+
+152. localize	
+    - Returns a list of the time ranges in which the search results were found.
+    
+153. reltime	
+    - Converts the difference between 'now' and '_time' to a human-readable value and adds adds this value to the field, 'reltime', in your search results.
