@@ -2,8 +2,8 @@
 
 ### Splunk é uma ferramenta de pesquisa e análise de Dados. "Google for LogFiles"
 
-*Faz uso do conceito de Big-Data, e banco de dados no-sql, indexando diariamente os dados dos sistemas.
-*Basicamente o Splunk trabalha de duas formas: Indexando e Consultando dados;
+* Faz uso do conceito de Big-Data, e banco de dados no-sql, indexando diariamente os dados dos sistemas.
+* Basicamente o Splunk trabalha de duas formas: Indexando e Consultando dados;
 
 Como funciona ?
 * SPL (Search Processing Languange) - Basicamente o conceito é encadear comandos sequencialmente, filtrando, transformando, incluindo e até mesmo excluindo dados.
@@ -36,7 +36,8 @@ Conceito de Apps:
 Search: earliest e latest
 * earliest representa a data do evento mais antigo
 * latest representa a data do evento mais recente
-Ex: search index=main usuario earliest=-5d@d latest=-1d@d
+
+Ex: **search index=main usuario earliest=-5d@d latest=-1d@d**
 
 Job:
 * Vida útil de um job em torno de 10 minutos
