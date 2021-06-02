@@ -20,3 +20,6 @@
 * Splunk Infrastructure Monitoring: Monitore sua infraestrutura com visibilidade de ponta a ponta e alertas baseados em IA para ambientes de nuvem privada, pública e hibrída em tempo real.
 * Splunk APM: Inove rapidamente enquanto oferece experiências de primeira classe ao cliente com monitoramento avançado e solução de problemas para aplicativos baseados em microsserviços nativos da nuvem.
 * Splunk On-Call(Formely VictorOps): Capacite suas equipes de plantão para encontrar e corrigir problemas mais rapidamente com roteamento de resposta a incidentes automatizado e perspicaz, colaboração e revisões.
+
+## Suporte aos Produtos
+* Community, Base, Standard, Premium.

@@ -29,6 +29,10 @@ Bucket:
 Licenciamento:
 * Faz uso do conceito de big-data, e banco de dados no-sql, indexando diariamente os dados dos sistemas.
 * Sua licença é comercializada na forma de volume de dados indexado diariamente.
+* 1.800,00 Doláres - 01GB por dia;
+* 1.800,00 Doláres - 10GB por dia;
+* 760,00 Doláres   - 50GB por dia;
+* 600,00 Doláres   - 100GB por dia;
 
 Conceito de Apps:
 * Apps são módulos, pronto para uso com poucos cliques.
