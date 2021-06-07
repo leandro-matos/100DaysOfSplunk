@@ -6,8 +6,8 @@
 * Perguntas de Múltipla escolha.
 
 ### Questões de Exemplo para a prova:
-1) Pergunta: Which command removes results with duplicate field values?
-1) Resposta: **dedup**
++ Pergunta: Which command removes results with duplicate field values?
+- Resposta: **dedup**
 
 02) Pergunta: These are booleans in the Splunk Search Language.
 02) Resposta: **And, NOT, OR**
