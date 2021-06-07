@@ -45,3 +45,5 @@ Ex: **search index=main usuario earliest=-5d@d latest=-1d@d**
 
 Job:
 * Vida útil de um job em torno de 10 minutos
+* | loadjob NomeDoEvento
+
