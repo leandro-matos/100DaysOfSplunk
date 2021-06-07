@@ -6,17 +6,17 @@
 * Perguntas de Múltipla escolha.
 
 ### Questões de Exemplo para a prova:
-01) Pergunta: Which command removes results with duplicate field values?
-    Resposta: **dedup**
+Pergunta: Which command removes results with duplicate field values?
+Resposta: **dedup**
 
-+ 02) Pergunta: These are booleans in the Splunk Search Language.
-    - 02) Resposta: **And, NOT, OR**
+Pergunta: These are booleans in the Splunk Search Language.
+Resposta: **And, NOT, OR**
 
-03) Pergunta: Which is not a comparison operator in Splunk?
-03) Resposta: **?=**
+Pergunta: Which is not a comparison operator in Splunk?
+Resposta: **?=**
 
-04) Pergunta: Field values are case sensitive.
-04) Resposta: **False**
+Pergunta: Field values are case sensitive.
+Resposta: **False**
 
 05) Pergunta: How is the asterisk used in Splunk search?
 05) Resposta: **As a wildcard**
