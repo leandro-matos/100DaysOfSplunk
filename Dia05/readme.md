@@ -6,35 +6,35 @@
 * Perguntas de Múltipla escolha.
 
 ### Questões de Exemplo para a prova:
-Pergunta: Which command removes results with duplicate field values?
+Which command removes results with duplicate field values?
 Resposta: **dedup**
 
-Pergunta: These are booleans in the Splunk Search Language.
+These are booleans in the Splunk Search Language.
 Resposta: **And, NOT, OR**
 
-Pergunta: Which is not a comparison operator in Splunk?
+Which is not a comparison operator in Splunk?
 Resposta: **?=**
 
-Pergunta: Field values are case sensitive.
+Field values are case sensitive.
 Resposta: **False**
 
-05) Pergunta: How is the asterisk used in Splunk search?
-05) Resposta: **As a wildcard**
+How is the asterisk used in Splunk search?
+Resposta: **As a wildcard**
 
-06) Pergunta: Which of the following is NOT a stats function:
-06) Resposta: **addtotals**
+Which of the following is NOT a stats function:
+Resposta: **addtotals**
 
-07) Pergunta: The search job inspector shows you how long a given search took to run.
-07) Resposta: **TRUE**
+The search job inspector shows you how long a given search took to run.
+Resposta: **TRUE**
 
-08) Pergunta: Which of the following search modes automatically returns all extracted fields in the fields sidebar?
-08) Resposta: **Verbose Mode**
+Which of the following search modes automatically returns all extracted fields in the fields sidebar?
+Resposta: **Verbose Mode**
 
-09) Pergunta: Bucket names in Splunk indexes are used to:
-09) Resposta: Determine if the bucket should be searched based on the time range of the search
+Bucket names in Splunk indexes are used to:
+Resposta: Determine if the bucket should be searched based on the time range of the search
 
-10) Pergunta: When searching, field values are case:
-10) Resposta: Insensitive
+When searching, field values are case:
+Resposta: Insensitive
 
 
 ### Materiais de Apoio:
