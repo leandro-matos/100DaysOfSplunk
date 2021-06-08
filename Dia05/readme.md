@@ -31,10 +31,10 @@ Which of the following search modes automatically returns all extracted fields i
 Resposta: **Verbose Mode**
 
 Bucket names in Splunk indexes are used to:
-Resposta: Determine if the bucket should be searched based on the time range of the search
+Resposta: **Determine if the bucket should be searched based on the time range of the search**
 
 When searching, field values are case:
-Resposta: Insensitive
+Resposta: **Insensitive**
 
 
 ### Materiais de Apoio:
