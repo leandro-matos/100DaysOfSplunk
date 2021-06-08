@@ -226,5 +226,5 @@ Example: **index=sales sourcetye=vendor_sales VendorID>=7000 AND VendorID<9000**
     - Produces scanCount of 127,201 events
     - Returns resultCount of 2,144 in 3.01 seconds
     - To calculate performance:
-        – Do not use resultCount/time	2,144 / 3.01	=	712	Events Per Second
-        – Rather, calculate scanCount/time	127,201/ 3.01	=	40,892	Events Per Second
+        + Do not use resultCount/time	2,144 / 3.01	=	712	Events Per Second
+        + Rather, calculate scanCount/time	127,201/ 3.01	=	40,892	Events Per Second
