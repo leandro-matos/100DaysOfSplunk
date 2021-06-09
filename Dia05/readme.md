@@ -51,6 +51,20 @@ Resposta: **Y**
 Which type of visualization allows you to show a third dimension of data?
 Resposta: **bubble chart**
 
+Which of the following are valid options with the chart command?
+Resposta: **useother** **usenull**
+
+The iplocation and geostats commands can be used together.
+Resposta: **True**
+
+The geom command allows you to create:
+Resposta: **choropleth maps**
+
+This command will compute the sum of numeric fields within events and place the result in a new field:
+Resposta: **addtotals**
+
+Which command is used to create choropleth maps?
+Resposta: **geom**
 
 
 ### Materiais de Apoio:
