@@ -36,10 +36,25 @@ Resposta: **Determine if the bucket should be searched based on the time range o
 When searching, field values are case:
 Resposta: **Insensitive**
 
+In this search, __________ will appear on the y-axis. SEARCH: **sourcetype=access_combined status!=200 | chart count over host**
+Resposta: **count**
+
+The ______ clause allows you to define which field is represented on the X axis of a chart.
+Resposta: **over**
+
+If a search returns _______ it can be viewed as a chart.
+Resposta: **statistics**
+
+The _____ axis should always be numeric.
+Resposta: **Y**
+
+Which type of visualization allows you to show a third dimension of data?
+Resposta: **bubble chart**
+
+
 
 ### Materiais de Apoio:
 * Commonly Used Search Commands: https://docs.splunk.com/Documentation/Splunk/latest/Search/GetstartedwithSearch
 * Search Job Inspector: https://docs.splunk.com/Documentation/Splunk/latest/Search/ViewsearchjobpropertieswiththeJobInspector
-
-
+* Creating Custom Visualizations: https://docs.splunk.com/Documentation/Splunk/latest/AdvancedDev/CustomVizDevOverview
 
