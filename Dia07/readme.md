@@ -121,34 +121,34 @@
 * Dados buscados apenas uma vez
 
 ### Detalhes sobre os Comandos
-stats:
+* stats:
     - Multi-level breakdown [by	clause]: Many
 
-chart: 
+* chart: 
     - Multi-level breakdown [by	clause]: 02
     - Limit # series shown: limit=n, Default=10
     - Filter other series: useother=false
     - Filter null values: usenull=false
 
-timechart:
+* timechart:
     - Multi-level breakdown [by	clause]: 01
     - Limit # series shown: limit=n, Default=10
     - Filter other series: useother=false
     - Filter null values: usenull=false
     - Set time value on x axis: span
 
-Para contar a frequência de um (s) campo (s), use **top/rare**
+* Para contar a frequência de um (s) campo (s), use **top/rare**
     - **index=security sourcetype=linux_secure | top src_ip,user,vendor_action,app**
     - **index=security sourcetype=linux_secure | rare src_ip,user,vendor_action,app**
 
-Use **stats** para calcular estatísticas para dois ou mais por campos (não baseado em tempo)
+* Use **stats** para calcular estatísticas para dois ou mais por campos (não baseado em tempo)
     - **index=security sourcetype=linux_secure | stats count by src_ip,user,vendor_action,app**
 
-Para calcular estatísticas com um campo arbitrário como eixo x (not _time), use o **chart**
+* Para calcular estatísticas com um campo arbitrário como eixo x (not _time), use o **chart**
     - Quando você usa um by field, a saída é uma tabela
     - Cada coluna representa um valor distinto do campo dividido
     - **index=security sourcetype=linux_secure | chart count over src_ip by vendor_action**
 
-Use o **timechart** de tempo para calcular estatísticas com _time como o eixo x
-Se for usado um by field, a saída é uma tabela
-Cada coluna representa um valor distinto do campo dividido por: **.. | timechart span=1h count by itemId limit=3 useother=f**
+* Use o **timechart** de tempo para calcular estatísticas com _time como o eixo x
+* Se for usado um by field, a saída é uma tabela
+* Cada coluna representa um valor distinto do campo dividido por: **.. | timechart span=1h count by itemId limit=3 useother=f**
