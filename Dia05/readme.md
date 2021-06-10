@@ -1,7 +1,9 @@
 
 # Splunk-Power-User
 
-* BluePrint = https://www.splunk.com/pdfs/training/Splunk-Test-Blueprint-User-v.1.1.pdf
+Esses são algumas perguntas preparatórios para a prova de Certificação PowerUser, uma das provas iniciais da Splunk para quem precisa executar tarefas de criação de consultas, alertas, dashboards, etc.
+
+* BluePrint = https://www.splunk.com/pdfs/training/Splunk-Test-Blueprint-Power-User-v.1.1.pdf
 * 65 Questões, mínimo de 75% de acerto.
 * Perguntas de Múltipla escolha.
 
@@ -65,7 +67,6 @@ Resposta: **addtotals**
 
 Which command is used to create choropleth maps?
 Resposta: **geom**
-
 
 ### Materiais de Apoio:
 * Commonly Used Search Commands: https://docs.splunk.com/Documentation/Splunk/latest/Search/GetstartedwithSearch
