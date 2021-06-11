@@ -68,6 +68,25 @@ Resposta: **addtotals**
 Which command is used to create choropleth maps?
 Resposta: **geom**
 
+By default, the fillnull Command replaces null values with:
+Resposta: **0**
+
+What is wrong with the following search syntax: sourcetype=vendor_sales | eval SalesTerritory = if((VendorID >= 7000 AND VendorID < 8000), Asia, "Rest of the World") | stats sum(price) as TotalRevenue by SalesTerritory
+Resposta: **Asia is not in double quotes**
+
+If the destination field for the eval command already exists, it is:
+Resposta: **overwritten by the new field defined in the eval command**
+
+You can only use one eval command per search.
+Resposta: **False**
+
+The eval command overwrites field values in the Splunk index.
+Resposta: **False**
+
+If you want to format values without changing their characteristics, which would you use?
+Resposta: **The fieldformat command**
+
+
 ### Materiais de Apoio:
 * Commonly Used Search Commands: https://docs.splunk.com/Documentation/Splunk/latest/Search/GetstartedwithSearch
 * Search Job Inspector: https://docs.splunk.com/Documentation/Splunk/latest/Search/ViewsearchjobpropertieswiththeJobInspector
