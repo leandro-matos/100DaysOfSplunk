@@ -86,9 +86,26 @@ Resposta: **False**
 If you want to format values without changing their characteristics, which would you use?
 Resposta: **The fieldformat command**
 
+Mark the terms that fill in the blanks in the correct order: Use _____ to see results of a calculation, or group events on a field value. Use _____ to see events correlated together, or grouped by start and end values.
+Resposta: **stats, transaction**
+
+What will you learn from the results of the following search? sourcetype=cisco_esa | transaction mid, dcid, icid | timechart avg(duration)
+Resposta: **The average time elapsed during each transaction for all transactions**
+
+You can create a transaction based on multiple fields.
+Resposta: **True**
+
+The maxpause definition:
+Resposta: **Finds groups of events where the span of time between included events does not exceed a specific value**
+
+Which of these is NOT a field that is automatically created with the transaction command?
+Resposta: **maxcount**
+
+The transaction command allows you to _________ events across multiple sources.
+Resposta: **correlate**
 
 ### Materiais de Apoio:
 * Commonly Used Search Commands: https://docs.splunk.com/Documentation/Splunk/latest/Search/GetstartedwithSearch
 * Search Job Inspector: https://docs.splunk.com/Documentation/Splunk/latest/Search/ViewsearchjobpropertieswiththeJobInspector
 * Creating Custom Visualizations: https://docs.splunk.com/Documentation/Splunk/latest/AdvancedDev/CustomVizDevOverview
-
+* Transaction Command Definitions: https://docs.splunk.com/Documentation/Splunk/latest/SearchReference/Transaction

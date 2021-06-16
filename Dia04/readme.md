@@ -1,5 +1,5 @@
 
-# Architecture
+# Arquitetura de Splunk:
 * Envie os dados de milhares de dispositivos usando qualquer combinação de **Splunk Forwarders**
 * Encaminhamento com balanceamento de carga automático para os **Indexers**
 * Descarregar a carga de pesquisa para as **Search Heads**
@@ -33,8 +33,7 @@
 * Dados em tempo real e histórico no local, na nuvem ou em ambos 
 * Mais de 140 comandos, incluindo detecção de anomalias e aprendizado de máquina
 * Uma vez que os dados foram adicionados a um index, você não pode editar ou alterar os dados. VOcê pode excluir todos os dados de um index ou pode excluí-lo e, opcionalmente, arquivar, intervalos de índice individuais com base na política, mas não pode excluir seletivamente eventos individuais do armazenamento
-
-Ex: Data (TCP, UDP, Script) --> Parsing Queue --> Parsing Pipeline --> Index Queue --> Real-Time Buffer (Search Proccess) / Indexing Pipeline (Raw Data Index Files)
+    - Ex: Data (TCP, UDP, Script) --> Parsing Queue --> Parsing Pipeline --> Index Queue --> Real-Time Buffer (Search Proccess) / Indexing Pipeline (Raw Data Index Files)
 
 # REFERENCE GUIDE
 * https://www.splunk.com/pdfs/solution-guides/splunk-quick-reference-guide.pdf
