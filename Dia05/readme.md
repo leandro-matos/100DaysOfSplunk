@@ -104,8 +104,25 @@ Resposta: **maxcount**
 The transaction command allows you to _________ events across multiple sources.
 Resposta: **correlate**
 
+Knowledge Objects can be used to normalize data.
+Resposta: **True**
+
+What are the predefined ways Knowledge Objects can be shared?
+Resposta: **Specific App, Private e All Apps**
+
+Which users can create private Knowledge Objects?
+Resposta: **User, Admin e Power**
+
+Knowledge Objects should be named as generically as possible.
+Resposta: **False**
+
+When a user creates a Knowledge Object it is automatically set to _________.
+Resposta: **Private**
+
+
 ### Materiais de Apoio:
 * Commonly Used Search Commands: https://docs.splunk.com/Documentation/Splunk/latest/Search/GetstartedwithSearch
 * Search Job Inspector: https://docs.splunk.com/Documentation/Splunk/latest/Search/ViewsearchjobpropertieswiththeJobInspector
 * Creating Custom Visualizations: https://docs.splunk.com/Documentation/Splunk/latest/AdvancedDev/CustomVizDevOverview
 * Transaction Command Definitions: https://docs.splunk.com/Documentation/Splunk/latest/SearchReference/Transaction
+* Recommended Naming Convention: https://docs.splunk.com/Documentation/Splunk/latest/Knowledge/Developnamingconventionsforknowledgeobjecttitles
