@@ -144,6 +144,23 @@ Esses são algumas perguntas preparatórios para a prova de Certificação Power
 - How many ways are there to access the Field Extractor Utility?
 - Resposta: **3**
 
+- A field can only have one field alias.
+- Resposta: **False**
+
+- Field aliases can only be applied to a single source type, source, or host.
+- Resposta: **False**
+
+- Calculated fields are based on underlying:
+- Resposta: **eval expressions**
+
+- Once a field alias is created:
+- Resposta: **You can still use the original field name to search**
+
+- Field aliases are used to _____ data.
+- Resposta: **normalize**
+
+
+
 
 ### Materiais de Apoio:
 * Commonly Used Search Commands: https://docs.splunk.com/Documentation/Splunk/latest/Search/GetstartedwithSearch
