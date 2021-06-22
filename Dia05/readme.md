@@ -159,7 +159,23 @@ Esses são algumas perguntas preparatórios para a prova de Certificação Power
 - Field aliases are used to _____ data.
 - Resposta: **normalize**
 
+- Event Types do not show up in the Fields List.
+- Resposta: **False**
 
+- Tags can be added to Event Types.
+- Resposta: **True**
+
+- These allow you to categorize events based on search terms.
+- Resposta: **Event Types**
+
+- Which search would limit an "alert" tag to the "host" field?
+- Resposta: **tag::host=alert**
+
+- You can only add one tag per field value pair.
+- Resposta: **False**
+
+- Tags are descriptive names for ____________.
+- Resposta: **Key Value Pairs**
 
 
 ### Materiais de Apoio:
