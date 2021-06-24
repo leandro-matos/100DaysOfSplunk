@@ -1,0 +1,163 @@
+<dashboard theme="dark">
+  <label>PowerUser - Módulo 07</label>
+  <row>
+    <panel>
+      <title>Macro sem Argumento</title>
+      <table>
+        <search>
+          <query>index=poweruser sourcetype=vendor_sales
+| stats sum(sale_price) as total_sales by Vendor
+| `convertUSD`</query>
+          <earliest>0</earliest>
+          <sampleRatio>1</sampleRatio>
+        </search>
+        <option name="count">5</option>
+        <option name="dataOverlayMode">none</option>
+        <option name="drilldown">none</option>
+        <option name="percentagesRow">false</option>
+        <option name="rowNumbers">true</option>
+        <option name="totalsRow">false</option>
+        <option name="wrap">true</option>
+      </table>
+    </panel>
+    <panel>
+      <title>Macro sem Argumento</title>
+      <table>
+        <search>
+          <query>index=poweruser sourcetype=vendor_sales VendorCountry=Germany OR VendorCountry=France OR
+VendorCountry=Italy 
+| stats sum(price) as USD by product_name 
+| `Europe_sales`</query>
+          <earliest>0</earliest>
+          <sampleRatio>1</sampleRatio>
+        </search>
+        <option name="count">5</option>
+        <option name="dataOverlayMode">none</option>
+        <option name="drilldown">none</option>
+        <option name="percentagesRow">false</option>
+        <option name="rowNumbers">true</option>
+        <option name="totalsRow">false</option>
+        <option name="wrap">true</option>
+      </table>
+    </panel>
+    <panel>
+      <title>Macro com um Argumento</title>
+      <table>
+        <search>
+          <query>index=poweruser sourcetype=vendor_sales
+| stats sum(sale_price) as total_sales by Vendor
+| `convertUSD("total_sales")`</query>
+          <earliest>0</earliest>
+          <sampleRatio>1</sampleRatio>
+        </search>
+        <option name="count">5</option>
+        <option name="dataOverlayMode">none</option>
+        <option name="drilldown">none</option>
+        <option name="percentagesRow">false</option>
+        <option name="rowNumbers">true</option>
+        <option name="totalsRow">false</option>
+        <option name="wrap">true</option>
+      </table>
+    </panel>
+    <panel>
+      <title>Macro com um Argumento</title>
+      <table>
+        <search>
+          <query>index=poweruser sourcetype=vendor_sales
+| stats sum(sale_price) as Average_Price by product_name
+| `convertUSD("Average_Price")`</query>
+          <earliest>0</earliest>
+          <sampleRatio>1</sampleRatio>
+        </search>
+        <option name="count">5</option>
+        <option name="dataOverlayMode">none</option>
+        <option name="drilldown">none</option>
+        <option name="percentagesRow">false</option>
+        <option name="rowNumbers">true</option>
+        <option name="totalsRow">false</option>
+        <option name="wrap">true</option>
+      </table>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <title>Macro com vários Argumentos</title>
+      <table>
+        <search>
+          <query>index=poweruser sourcetype=vendor_sales
+| stats avg(sale_price) as Average_Price by product_name
+| `convertUSD(eval, Average_Price)`
+| sort - Average_Price</query>
+          <earliest>0</earliest>
+          <sampleRatio>1</sampleRatio>
+        </search>
+        <option name="count">5</option>
+        <option name="dataOverlayMode">none</option>
+        <option name="drilldown">none</option>
+        <option name="percentagesRow">false</option>
+        <option name="rowNumbers">true</option>
+        <option name="totalsRow">false</option>
+        <option name="wrap">true</option>
+      </table>
+    </panel>
+    <panel>
+      <title>Macro com vários Argumentos</title>
+      <table>
+        <search>
+          <query>index=poweruser sourcetype=vendor_sales
+| stats avg(sale_price) as Average_Price by product_name
+| `convertUSD(fieldformat, Average_Price)`
+| sort - Average_Price</query>
+          <earliest>0</earliest>
+          <sampleRatio>1</sampleRatio>
+        </search>
+        <option name="count">5</option>
+        <option name="dataOverlayMode">none</option>
+        <option name="drilldown">none</option>
+        <option name="percentagesRow">false</option>
+        <option name="rowNumbers">true</option>
+        <option name="totalsRow">false</option>
+        <option name="wrap">true</option>
+      </table>
+    </panel>
+    <panel>
+      <title>Macro com vários Argumentos</title>
+      <table>
+        <search>
+          <query>index=poweruser 
+sourcetype=vendor_sales VendorCountry=Germany OR VendorCountry=France OR
+VendorCountry=Italy 
+| `convert_sales(euro,€,.79)`</query>
+          <earliest>0</earliest>
+          <sampleRatio>1</sampleRatio>
+        </search>
+        <option name="count">4</option>
+        <option name="dataOverlayMode">none</option>
+        <option name="drilldown">none</option>
+        <option name="percentagesRow">false</option>
+        <option name="rowNumbers">true</option>
+        <option name="totalsRow">false</option>
+        <option name="wrap">true</option>
+      </table>
+    </panel>
+    <panel>
+      <title>Macro com vários Argumentos</title>
+      <table>
+        <search>
+          <query>index=poweruser 
+sourcetype=vendor_sales VendorCountry="United Kingdom"
+|`convert_sales(GBP,£,.64)`</query>
+          <earliest>0</earliest>
+          <sampleRatio>1</sampleRatio>
+        </search>
+        <option name="count">4</option>
+        <option name="dataOverlayMode">none</option>
+        <option name="drilldown">none</option>
+        <option name="percentagesRow">false</option>
+        <option name="rowNumbers">true</option>
+        <option name="totalsRow">false</option>
+        <option name="wrap">true</option>
+      </table>
+    </panel>
+  </row>
+</dashboard>

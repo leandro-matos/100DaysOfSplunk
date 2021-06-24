@@ -177,6 +177,27 @@ Esses são algumas perguntas preparatórios para a prova de Certificação Power
 - Tags are descriptive names for ____________.
 - Resposta: **Key Value Pairs**
 
+- You can pipe the results of a macro to other commands
+- Resposta: **True**
+
+- Search macros:
+- Resposta: **Can pass arguments to the search**
+- Resposta: **Are time-range independent**
+- Resposta: **Allow you to store entire search strings, including pipes and eval statements**
+
+- What is the correct way to name a macro with two arguments?
+- Resposta: **us_sales(2)**
+
+- The search expansion tool:
+- Resposta: **Allows you to see what a macro will expand to before you run a search.**
+
+- What is the proper syntax for using a macro named "us_sales"
+- Resposta: **`us_sales`**
+
+- The number of arguments in a macro must be included in the macro name.
+- Resposta: **True**
+
+
 
 ### Materiais de Apoio:
 * Commonly Used Search Commands: https://docs.splunk.com/Documentation/Splunk/latest/Search/GetstartedwithSearch
