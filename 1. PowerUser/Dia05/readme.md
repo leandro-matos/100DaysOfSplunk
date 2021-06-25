@@ -109,93 +109,93 @@ Esses são algumas perguntas preparatórios para a prova de Certificação Power
     - Resposta: **True**
 
 - What are the predefined ways Knowledge Objects can be shared?
-- Resposta: **Specific App, Private e All Apps**
+    - Resposta: **Specific App, Private e All Apps**
 
 - Which users can create private Knowledge Objects?
-- Resposta: **User, Admin e Power**
+    - Resposta: **User, Admin e Power**
 
 - Knowledge Objects should be named as generically as possible.
-- Resposta: **False**
+    - Resposta: **False**
 
 - When a user creates a Knowledge Object it is automatically set to _________.
-- Resposta: **Private**
+    - Resposta: **Private**
 
 - When extracting fields, we may choose to use our own regular expressions.
-- Resposta: **True**
+    - Resposta: **True**
 
 - In the Field Extractor Utility, this button will display events that do not contain extracted fields.
-- Resposta: **Non-Matches**
+    - Resposta: **Non-Matches**
 
 - After editing your regular expression from the Field Extractor Utility, you will be returned to the utility.
-- Resposta: **False**
+    - Resposta: **False**
 
 - Once a field is created using the regex method, you cannot modify the underlying regular expression.
-- Resposta: **False**
+    - Resposta: **False**
 
 - The field extractor utility allows you to extract fields using the following two methods:
-- Resposta: **regex and delimiter**
+    - Resposta: **regex and delimiter**
 
 - Fields extracted with the Field Extractor:
-- Resposta: **Are specific to a host, source or sourcetype; Are persistent**
+    - Resposta: **Are specific to a host, source or sourcetype; Are persistent**
 
 - During the validation step of the Field Extractor workflow:
-- Resposta: **You can remove values that aren't a match for the field you want to define**
+    - Resposta: **You can remove values that aren't a match for the field you want to define**
 
 - How many ways are there to access the Field Extractor Utility?
-- Resposta: **3**
+    - Resposta: **3**
 
 - A field can only have one field alias.
-- Resposta: **False**
+    - Resposta: **False**
 
 - Field aliases can only be applied to a single source type, source, or host.
-- Resposta: **False**
+    - Resposta: **False**
 
 - Calculated fields are based on underlying:
-- Resposta: **eval expressions**
+    - Resposta: **eval expressions**
 
 - Once a field alias is created:
-- Resposta: **You can still use the original field name to search**
+    - Resposta: **You can still use the original field name to search**
 
 - Field aliases are used to _____ data.
-- Resposta: **normalize**
+    - Resposta: **normalize**
 
 - Event Types do not show up in the Fields List.
-- Resposta: **False**
+    - Resposta: **False**
 
 - Tags can be added to Event Types.
-- Resposta: **True**
+    - Resposta: **True**
 
 - These allow you to categorize events based on search terms.
-- Resposta: **Event Types**
+    - Resposta: **Event Types**
 
 - Which search would limit an "alert" tag to the "host" field?
-- Resposta: **tag::host=alert**
+    - Resposta: **tag::host=alert**
 
 - You can only add one tag per field value pair.
-- Resposta: **False**
+    - Resposta: **False**
 
 - Tags are descriptive names for ____________.
-- Resposta: **Key Value Pairs**
+    - Resposta: **Key Value Pairs**
 
 - You can pipe the results of a macro to other commands
-- Resposta: **True**
+    - Resposta: **True**
 
 - Search macros:
-- Resposta: **Can pass arguments to the search**
-- Resposta: **Are time-range independent**
-- Resposta: **Allow you to store entire search strings, including pipes and eval statements**
+    - Resposta: **Can pass arguments to the search**
+    - Resposta: **Are time-range independent**
+    - Resposta: **Allow you to store entire search strings, including pipes and eval statements**
 
 - What is the correct way to name a macro with two arguments?
-- Resposta: **us_sales(2)**
+    - Resposta: **us_sales(2)**
 
 - The search expansion tool:
-- Resposta: **Allows you to see what a macro will expand to before you run a search.**
+    - Resposta: **Allows you to see what a macro will expand to before you run a search.**
 
 - What is the proper syntax for using a macro named "us_sales"
-- Resposta: **`us_sales`**
+    - Resposta: **`us_sales`**
 
 - The number of arguments in a macro must be included in the macro name.
-- Resposta: **True**
+    - Resposta: **True**
 
 
 
