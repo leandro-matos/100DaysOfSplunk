@@ -9,104 +9,104 @@ Esses são algumas perguntas preparatórios para a prova de Certificação Power
 
 ### Questões de Exemplo para a prova:
 - Which command removes results with duplicate field values?
-- Resposta: **dedup**
+    - Resposta: **dedup**
 
 - These are booleans in the Splunk Search Language.
-- Resposta: **And, NOT, OR**
+    - Resposta: **And, NOT, OR**
 
 - Which is not a comparison operator in Splunk?
-- Resposta: **?=**
+    - Resposta: **?=**
 
 - Field values are case sensitive.
-- Resposta: **False**
+    - Resposta: **False**
 
 - How is the asterisk used in Splunk search?
-- Resposta: **As a wildcard**
+    - Resposta: **As a wildcard**
 
 - Which of the following is NOT a stats function:
-- Resposta: **addtotals**
+    - Resposta: **addtotals**
 
 - The search job inspector shows you how long a given search took to run.
-- Resposta: **TRUE**
+    - Resposta: **TRUE**
 
 - Which of the following search modes automatically returns all extracted fields in the fields sidebar?
-- Resposta: **Verbose Mode**
+    - Resposta: **Verbose Mode**
 
 - Bucket names in Splunk indexes are used to:
-- Resposta: **Determine if the bucket should be searched based on the time range of the search**
+    - Resposta: **Determine if the bucket should be searched based on the time range of the search**
 
 - When searching, field values are case:
-- Resposta: **Insensitive**
+    - Resposta: **Insensitive**
 
 - In this search, __________ will appear on the y-axis. SEARCH: **sourcetype=access_combined status!=200 | chart count over host**
-- Resposta: **count**
+    - Resposta: **count**
 
 - The ______ clause allows you to define which field is represented on the X axis of a chart.
-- Resposta: **over**
+    - Resposta: **over**
 
 - If a search returns _______ it can be viewed as a chart.
-- Resposta: **statistics**
+    - Resposta: **statistics**
 
 - The _____ axis should always be numeric.
-- Resposta: **Y**
+    - Resposta: **Y**
 
 - Which type of visualization allows you to show a third dimension of data?
-- Resposta: **bubble chart**
+    - Resposta: **bubble chart**
 
 - Which of the following are valid options with the chart command?
-- Resposta: **useother** **usenull**
+    - Resposta: **useother** **usenull**
 
 - The iplocation and geostats commands can be used together.
-- Resposta: **True**
+    - Resposta: **True**
 
 - The geom command allows you to create:
-- Resposta: **choropleth maps**
+    - Resposta: **choropleth maps**
 
 - This command will compute the sum of numeric fields within events and place the result in a new field:
-- Resposta: **addtotals**
+    - Resposta: **addtotals**
 
 - Which command is used to create choropleth maps?
-- Resposta: **geom**
+    - Resposta: **geom**
 
 - By default, the fillnull Command replaces null values with:
-- Resposta: **0**
+    - Resposta: **0**
 
 - What is wrong with the following search syntax: 
-- sourcetype=vendor_sales | eval SalesTerritory = if((VendorID >= 7000 AND VendorID < 8000), Asia, "Rest of the World") | stats sum(price) as TotalRevenue by SalesTerritory
-- Resposta: **Asia is not in double quotes**
+    - sourcetype=vendor_sales | eval SalesTerritory = if((VendorID >= 7000 AND VendorID < 8000), Asia, "Rest of the World") | stats sum(price) as TotalRevenue by SalesTerritory
+    - Resposta: **Asia is not in double quotes**
 
 - If the destination field for the eval command already exists, it is:
-- Resposta: **overwritten by the new field defined in the eval command**
+    - Resposta: **overwritten by the new field defined in the eval command**
 
 - You can only use one eval command per search.
-- Resposta: **False**
+    - Resposta: **False**
 
 - The eval command overwrites field values in the Splunk index.
-- Resposta: **False**
+    - Resposta: **False**
 
 - If you want to format values without changing their characteristics, which would you use?
-- Resposta: **The fieldformat command**
+    - Resposta: **The fieldformat command**
 
 - Mark the terms that fill in the blanks in the correct order: Use _____ to see results of a calculation, or group events on a field value. Use _____ to see events correlated together, or grouped by start and end values.
-- Resposta: **stats, transaction**
+    - Resposta: **stats, transaction**
 
 - What will you learn from the results of the following search? sourcetype=cisco_esa | transaction mid, dcid, icid | timechart avg(duration)
-- Resposta: **The average time elapsed during each transaction for all transactions**
+    - Resposta: **The average time elapsed during each transaction for all transactions**
 
 - You can create a transaction based on multiple fields.
-- Resposta: **True**
+    - Resposta: **True**
 
 - The maxpause definition:
-- Resposta: **Finds groups of events where the span of time between included events does not exceed a specific value**
+    - Resposta: **Finds groups of events where the span of time between included events does not exceed a specific value**
 
 - Which of these is NOT a field that is automatically created with the transaction command?
-- Resposta: **maxcount**
+    - Resposta: **maxcount**
 
 - The transaction command allows you to _________ events across multiple sources.
-- Resposta: **correlate**
+    - Resposta: **correlate**
 
 - Knowledge Objects can be used to normalize data.
-- Resposta: **True**
+    - Resposta: **True**
 
 - What are the predefined ways Knowledge Objects can be shared?
 - Resposta: **Specific App, Private e All Apps**
