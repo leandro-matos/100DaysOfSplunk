@@ -197,7 +197,25 @@ Esses são algumas perguntas preparatórios para a prova de Certificação Power
 - The number of arguments in a macro must be included in the macro name.
     - Resposta: **True**
 
+- Workflow Actions can only be applied to a single field.
+    - Resposta: **False**
 
+- To use field value data from an event in a Workflow Action, we need to:
+    - Resposta: **Wrap the field in dollar signs.**
+
+- This Workflow Action type directs users to a specified URI.
+    - Resposta: **GET**
+
+- A Workflow action can:
+    - Resposta: **Send field values to external sources.**
+    - Resposta: **Execute a secondary search**
+    - Resposta: **Direct users to a specified URI**
+
+- When using a field value variable with a Workflow Action, which punctuation mark will escape the data?
+    - Resposta: **!**
+
+- This Workflow Action type sends field values to external resources.
+    - Resposta: **POST**
 
 ### Materiais de Apoio:
 * Commonly Used Search Commands: https://docs.splunk.com/Documentation/Splunk/latest/Search/GetstartedwithSearch
