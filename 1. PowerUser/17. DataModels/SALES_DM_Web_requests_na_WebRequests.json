@@ -1,0 +1,896 @@
+{
+    "modelName": "SALES_DM_Web_requests_na_WebRequests",
+    "displayName": "SALES_DM_Web_requests_na_WebRequests",
+    "description": "",
+    "objectSummary": {
+        "Event-Based": 4,
+        "Transaction-Based": 1,
+        "Search-Based": 0
+    },
+    "objects": [
+        {
+            "objectName": "web_requests",
+            "displayName": "web_requests",
+            "parentName": "BaseEvent",
+            "comment": "",
+            "fields": [
+                {
+                    "fieldName": "action",
+                    "owner": "web_requests",
+                    "type": "string",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "Action Taken",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "categoryId",
+                    "owner": "web_requests",
+                    "type": "string",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "Product Category",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "clientip",
+                    "owner": "web_requests",
+                    "type": "ipv4",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "Customer IP",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "price",
+                    "owner": "web_requests",
+                    "type": "number",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "Price",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "product_name",
+                    "owner": "web_requests",
+                    "type": "string",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "Product Name",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "status",
+                    "owner": "web_requests",
+                    "type": "number",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "HTTP Status",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "_time",
+                    "owner": "BaseEvent",
+                    "type": "timestamp",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "_time",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "host",
+                    "owner": "BaseEvent",
+                    "type": "string",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": true,
+                    "editable": true,
+                    "displayName": "host",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "source",
+                    "owner": "BaseEvent",
+                    "type": "string",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": true,
+                    "editable": true,
+                    "displayName": "source",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "sourcetype",
+                    "owner": "BaseEvent",
+                    "type": "string",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": true,
+                    "editable": true,
+                    "displayName": "sourcetype",
+                    "comment": ""
+                }
+            ],
+            "calculations": [
+                {
+                    "outputFields": [
+                        {
+                            "fieldName": "Day",
+                            "owner": "web_requests",
+                            "type": "string",
+                            "fieldSearch": "",
+                            "required": false,
+                            "multivalue": false,
+                            "hidden": false,
+                            "editable": true,
+                            "displayName": "Day",
+                            "comment": ""
+                        }
+                    ],
+                    "calculationID": "w560lozbpo",
+                    "owner": "web_requests",
+                    "editable": true,
+                    "comment": "",
+                    "calculationType": "Eval",
+                    "expression": "strftime(_time,\"%m:%d:%A\")"
+                },
+                {
+                    "outputFields": [
+                        {
+                            "fieldName": "clientip_lon",
+                            "owner": "web_requests",
+                            "type": "number",
+                            "fieldSearch": "clientip_lon=*",
+                            "required": true,
+                            "multivalue": false,
+                            "hidden": false,
+                            "editable": true,
+                            "displayName": "clientip_lon",
+                            "comment": "",
+                            "lookupOutputFieldName": "lon"
+                        },
+                        {
+                            "fieldName": "clientip_lat",
+                            "owner": "web_requests",
+                            "type": "number",
+                            "fieldSearch": "clientip_lat=*",
+                            "required": true,
+                            "multivalue": false,
+                            "hidden": false,
+                            "editable": true,
+                            "displayName": "clientip_lat",
+                            "comment": "",
+                            "lookupOutputFieldName": "lat"
+                        },
+                        {
+                            "fieldName": "clientip_City",
+                            "owner": "web_requests",
+                            "type": "string",
+                            "fieldSearch": "clientip_City=*",
+                            "required": true,
+                            "multivalue": false,
+                            "hidden": false,
+                            "editable": true,
+                            "displayName": "clientip_City",
+                            "comment": "",
+                            "lookupOutputFieldName": "City"
+                        },
+                        {
+                            "fieldName": "clientip_Region",
+                            "owner": "web_requests",
+                            "type": "string",
+                            "fieldSearch": "clientip_Region=*",
+                            "required": true,
+                            "multivalue": false,
+                            "hidden": false,
+                            "editable": true,
+                            "displayName": "clientip_Region",
+                            "comment": "",
+                            "lookupOutputFieldName": "Region"
+                        },
+                        {
+                            "fieldName": "clientip_Country",
+                            "owner": "web_requests",
+                            "type": "string",
+                            "fieldSearch": "clientip_Country=*",
+                            "required": true,
+                            "multivalue": false,
+                            "hidden": false,
+                            "editable": true,
+                            "displayName": "clientip_Country",
+                            "comment": "",
+                            "lookupOutputFieldName": "Country"
+                        }
+                    ],
+                    "inputField": "clientip",
+                    "calculationType": "GeoIP",
+                    "comment": "",
+                    "owner": "web_requests",
+                    "calculationID": "vwog1lrk7dd",
+                    "editable": true
+                }
+            ],
+            "constraints": [
+                {
+                    "search": "index=poweruser sourcetype=\"access_combined_wcookie\"",
+                    "owner": "web_requests"
+                }
+            ],
+            "lineage": "web_requests"
+        },
+        {
+            "objectName": "SucessFul_Requests",
+            "displayName": "SucessFul Requests",
+            "parentName": "web_requests",
+            "comment": "",
+            "fields": [
+                {
+                    "fieldName": "action",
+                    "owner": "web_requests",
+                    "type": "string",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "Action Taken",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "categoryId",
+                    "owner": "web_requests",
+                    "type": "string",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "Product Category",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "clientip",
+                    "owner": "web_requests",
+                    "type": "ipv4",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "Customer IP",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "price",
+                    "owner": "web_requests",
+                    "type": "number",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "Price",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "product_name",
+                    "owner": "web_requests",
+                    "type": "string",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "Product Name",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "status",
+                    "owner": "web_requests",
+                    "type": "number",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": true,
+                    "editable": true,
+                    "displayName": "HTTP Status",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "_time",
+                    "owner": "BaseEvent",
+                    "type": "timestamp",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "_time",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "host",
+                    "owner": "BaseEvent",
+                    "type": "string",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "host",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "source",
+                    "owner": "BaseEvent",
+                    "type": "string",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "source",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "sourcetype",
+                    "owner": "BaseEvent",
+                    "type": "string",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "sourcetype",
+                    "comment": ""
+                }
+            ],
+            "calculations": [],
+            "constraints": [
+                {
+                    "search": "status=200",
+                    "owner": "web_requests.SucessFul_Requests"
+                }
+            ],
+            "lineage": "web_requests.SucessFul_Requests"
+        },
+        {
+            "objectName": "purchases",
+            "displayName": "purchases",
+            "parentName": "SucessFul_Requests",
+            "comment": "",
+            "fields": [
+                {
+                    "fieldName": "action",
+                    "owner": "web_requests",
+                    "type": "string",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "Action Taken",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "categoryId",
+                    "owner": "web_requests",
+                    "type": "string",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "Product Category",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "clientip",
+                    "owner": "web_requests",
+                    "type": "ipv4",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "Customer IP",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "price",
+                    "owner": "web_requests",
+                    "type": "number",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "Price",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "product_name",
+                    "owner": "web_requests",
+                    "type": "string",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "Product Name",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "status",
+                    "owner": "web_requests",
+                    "type": "number",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "HTTP Status",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "_time",
+                    "owner": "BaseEvent",
+                    "type": "timestamp",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "_time",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "host",
+                    "owner": "BaseEvent",
+                    "type": "string",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "host",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "source",
+                    "owner": "BaseEvent",
+                    "type": "string",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "source",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "sourcetype",
+                    "owner": "BaseEvent",
+                    "type": "string",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "sourcetype",
+                    "comment": ""
+                }
+            ],
+            "calculations": [],
+            "constraints": [
+                {
+                    "search": "action=purchase",
+                    "owner": "web_requests.SucessFul_Requests.purchases"
+                }
+            ],
+            "lineage": "web_requests.SucessFul_Requests.purchases"
+        },
+        {
+            "objectName": "Server_Errors",
+            "displayName": "Server Errors",
+            "parentName": "web_requests",
+            "comment": "",
+            "fields": [
+                {
+                    "fieldName": "action",
+                    "owner": "web_requests",
+                    "type": "string",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "Action Taken",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "categoryId",
+                    "owner": "web_requests",
+                    "type": "string",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "Product Category",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "clientip",
+                    "owner": "web_requests",
+                    "type": "ipv4",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "Customer IP",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "price",
+                    "owner": "web_requests",
+                    "type": "number",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "Price",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "product_name",
+                    "owner": "web_requests",
+                    "type": "string",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "Product Name",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "status",
+                    "owner": "web_requests",
+                    "type": "number",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "HTTP Status",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "_time",
+                    "owner": "BaseEvent",
+                    "type": "timestamp",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "_time",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "host",
+                    "owner": "BaseEvent",
+                    "type": "string",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "host",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "source",
+                    "owner": "BaseEvent",
+                    "type": "string",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "source",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "sourcetype",
+                    "owner": "BaseEvent",
+                    "type": "string",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "sourcetype",
+                    "comment": ""
+                }
+            ],
+            "calculations": [],
+            "constraints": [
+                {
+                    "search": "status=5*",
+                    "owner": "web_requests.Server_Errors"
+                }
+            ],
+            "lineage": "web_requests.Server_Errors"
+        },
+        {
+            "objectName": "Visits_by_IP",
+            "displayName": "Visits by IP",
+            "parentName": "BaseTransaction",
+            "comment": "",
+            "fields": [
+                {
+                    "fieldName": "action",
+                    "owner": "Visits_by_IP",
+                    "type": "string",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": true,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "Action Taken",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "categoryId",
+                    "owner": "Visits_by_IP",
+                    "type": "string",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": true,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "Product Category",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "clientip",
+                    "owner": "Visits_by_IP",
+                    "type": "ipv4",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": true,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "Customer IP",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "price",
+                    "owner": "Visits_by_IP",
+                    "type": "number",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": true,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "Price",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "product_name",
+                    "owner": "Visits_by_IP",
+                    "type": "string",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": true,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "Product Name",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "status",
+                    "owner": "Visits_by_IP",
+                    "type": "number",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": true,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "HTTP Status",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "Day",
+                    "owner": "Visits_by_IP",
+                    "type": "string",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": true,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "Day",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "clientip_lon",
+                    "owner": "Visits_by_IP",
+                    "type": "number",
+                    "fieldSearch": "clientip_lon=*",
+                    "required": true,
+                    "multivalue": true,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "clientip_lon",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "clientip_lat",
+                    "owner": "Visits_by_IP",
+                    "type": "number",
+                    "fieldSearch": "clientip_lat=*",
+                    "required": true,
+                    "multivalue": true,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "clientip_lat",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "clientip_City",
+                    "owner": "Visits_by_IP",
+                    "type": "string",
+                    "fieldSearch": "clientip_City=*",
+                    "required": true,
+                    "multivalue": true,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "clientip_City",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "clientip_Region",
+                    "owner": "Visits_by_IP",
+                    "type": "string",
+                    "fieldSearch": "clientip_Region=*",
+                    "required": true,
+                    "multivalue": true,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "clientip_Region",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "clientip_Country",
+                    "owner": "Visits_by_IP",
+                    "type": "string",
+                    "fieldSearch": "clientip_Country=*",
+                    "required": true,
+                    "multivalue": true,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "clientip_Country",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "_time",
+                    "owner": "BaseTransaction",
+                    "type": "timestamp",
+                    "fieldSearch": "_time=*",
+                    "required": true,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "_time",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "eventcount",
+                    "owner": "BaseTransaction",
+                    "type": "number",
+                    "fieldSearch": "eventcount=*",
+                    "required": true,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "eventcount",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "duration",
+                    "owner": "BaseTransaction",
+                    "type": "number",
+                    "fieldSearch": "duration=*",
+                    "required": true,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "duration",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "host",
+                    "owner": "BaseTransaction",
+                    "type": "string",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": true,
+                    "hidden": true,
+                    "editable": true,
+                    "displayName": "host",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "source",
+                    "owner": "BaseTransaction",
+                    "type": "string",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": true,
+                    "hidden": true,
+                    "editable": true,
+                    "displayName": "source",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "sourcetype",
+                    "owner": "BaseTransaction",
+                    "type": "string",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": true,
+                    "hidden": true,
+                    "editable": true,
+                    "displayName": "sourcetype",
+                    "comment": ""
+                }
+            ],
+            "calculations": [],
+            "constraints": [],
+            "lineage": "Visits_by_IP",
+            "groupByFields": [
+                "clientip"
+            ],
+            "objectsToGroup": [
+                "web_requests"
+            ],
+            "transactionMaxTimeSpan": "",
+            "transactionMaxPause": "5m"
+        }
+    ],
+    "objectNameList": [
+        "web_requests",
+        "SucessFul_Requests",
+        "purchases",
+        "Server_Errors",
+        "Visits_by_IP"
+    ]
+}

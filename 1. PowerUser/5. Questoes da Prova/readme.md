@@ -217,6 +217,22 @@ Esses são algumas perguntas preparatórios para a prova de Certificação Power
 - This Workflow Action type sends field values to external resources.
     - Resposta: **POST**
 
+- Required fields in a data model:
+    - Resposta: **constrains the dataset to only return events that include that field**
+
+- Which of these are NOT Data Model dataset types:
+    - Resposta: **Lookups**
+
+- The only way to access and use a dataset is from the Pivot interface.
+    - Resposta: **False**
+
+- Hidden fields in a data model:
+    - Resposta: **will not be displayed to a Pivot user, but can be used to define other datasets**
+
+- Fields used in Data Models must already be extracted before creating the datasets.
+    - Resposta: **False**
+
+
 ### Materiais de Apoio:
 * Commonly Used Search Commands: https://docs.splunk.com/Documentation/Splunk/latest/Search/GetstartedwithSearch
 * Search Job Inspector: https://docs.splunk.com/Documentation/Splunk/latest/Search/ViewsearchjobpropertieswiththeJobInspector
@@ -224,3 +240,4 @@ Esses são algumas perguntas preparatórios para a prova de Certificação Power
 * Transaction Command Definitions: https://docs.splunk.com/Documentation/Splunk/latest/SearchReference/Transaction
 * Recommended Naming Convention: https://docs.splunk.com/Documentation/Splunk/latest/Knowledge/Developnamingconventionsforknowledgeobjecttitles
 * Splunk Regular Expressions: https://docs.splunk.com/Documentation/Splunk/latest/Knowledge/AboutSplunkregularexpressions
+* Accelerating Data Models: https://docs.splunk.com/Documentation/Splunk/latest/Knowledge/Acceleratedatamodels
