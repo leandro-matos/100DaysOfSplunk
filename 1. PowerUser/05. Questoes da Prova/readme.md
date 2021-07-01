@@ -8,6 +8,42 @@ Esses são algumas perguntas preparatórios para a prova de Certificação Power
 * Perguntas de Múltipla escolha.
 
 ### Questões de Exemplo para a prova:
+- The _____ function of the eval command can take multiple boolean arguments.
+    - Resposta: **case**
+
+- Which of these search strings is NOT valid:
+    - Resposta: **index=web status=50* | chart count over host, status**
+
+- datasets can be added to a root dataset to narrow down the search
+    - Resposta: **event**
+
+- can share a knowledge object across all apps.
+    - Resposta: **Administrators**
+
+- Splunk suggests naming your Knowledge Objects using _______ segmented keys.
+    - Resposta: **6**
+
+- The eval command 'if' function requires the following three arguments (in order):
+    - Resposta: **boolean expression, result if true, result if false**
+
+- Which function should you use with the transaction command to set the maximum total time between the earliest and latest events returned?
+    - Resposta: **maxspan**
+
+- The trendline command requires the following three arguments:
+    - Resposta: **trend type, time period, and field**
+
+- The gauge command:
+    - Resposta: **allows you to set colored ranges for a single-value visualization.**
+
+- Warm buckets in Splunk indexes are named by:
+    - Resposta: **the timestamps of first and last event in the bucket**
+
+- Time is the most efficient filter you can apply to a search.
+    - Resposta: **True**
+
+- How many results are shown by default when using a Top or Rare Command?
+    - Resposta: **10**
+
 - Which command removes results with duplicate field values?
     - Resposta: **dedup**
 
@@ -232,12 +268,36 @@ Esses são algumas perguntas preparatórios para a prova de Certificação Power
 - Fields used in Data Models must already be extracted before creating the datasets.
     - Resposta: **False**
 
+- This role is required to install the CIM Add-on.
+    - Resposta: **ADMIN**
+
+- The CIM Add-on indexes extra data and will affect license usage.
+    - Resposta: **False**
+
+- By default, data models in the CIM Add-on will search across all indexes.
+    - Resposta: **True**
+
+- You can normalize data for CIM use:
+    - Resposta: **Using Knowledge Objects**
+    - Resposta: **At Index Time**
+
+- The Splunk CIM Add-on includes data models in a __________ format.
+    - Resposta: **JSON**
+
+- The data models in the CIM Add-on are accelerated by default.
+    - Resposta: **False**
+
+- The CIM schema should be used when creating Field Extractions, Aliases, Event Types, and Tags.
+    - Resposta: **True**
 
 ### Materiais de Apoio:
-* Commonly Used Search Commands: https://docs.splunk.com/Documentation/Splunk/latest/Search/GetstartedwithSearch
-* Search Job Inspector: https://docs.splunk.com/Documentation/Splunk/latest/Search/ViewsearchjobpropertieswiththeJobInspector
-* Creating Custom Visualizations: https://docs.splunk.com/Documentation/Splunk/latest/AdvancedDev/CustomVizDevOverview
-* Transaction Command Definitions: https://docs.splunk.com/Documentation/Splunk/latest/SearchReference/Transaction
-* Recommended Naming Convention: https://docs.splunk.com/Documentation/Splunk/latest/Knowledge/Developnamingconventionsforknowledgeobjecttitles
-* Splunk Regular Expressions: https://docs.splunk.com/Documentation/Splunk/latest/Knowledge/AboutSplunkregularexpressions
-* Accelerating Data Models: https://docs.splunk.com/Documentation/Splunk/latest/Knowledge/Acceleratedatamodels
+* Commonly Used Search Commands: shorturl.at/tNSUZ
+* Search Job Inspector: shorturl.at/kJOY4
+* Creating Custom Visualizations: shorturl.at/aorR7
+* Transaction Command Definitions: shorturl.at/clBEQ
+* Recommended Naming Convention: shorturl.at/wFG08
+* Splunk Regular Expressions: shorturl.at/tzBM2
+* Accelerating Data Models: shorturl.at/tvDQ9
+* Splunk CIM add-on: https://splunkbase.splunk.com/app/1621/
+* CIM Reference Tables: shorturl.at/zCL06
+* CIM Documentation: shorturl.at/hnvxG
