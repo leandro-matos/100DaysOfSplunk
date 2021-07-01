@@ -14,15 +14,15 @@
     - Correlação mais fácil e eficiente de dados de diferentes sources e source types
 
 ### Normalizando Field Names - Email Data
-- Field Name: action
-- Data Type:  string
-- Description: Action taken by the reporting device
-- Possible Values: delivered, blocked, quarantined, deleted, unknown
+    - Field Name: action
+    - Data Type:  string
+    - Description: Action taken by the reporting device
+    - Possible Values: delivered, blocked, quarantined, deleted, unknown
 
-- Field Name: duration
-- Data Type:  number
-- Description: The amount of time for the completion of the messaging event, in seconds.
-- Possible Values: Email
+    - Field Name: duration
+    - Data Type:  number
+    - Description: The amount of time for the completion of the messaging event, in seconds.
+    - Possible Values: Email
 
 Field Name: src
 Data Type:  string
