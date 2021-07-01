@@ -24,58 +24,58 @@
     - Description: The amount of time for the completion of the messaging event, in seconds.
     - Possible Values: Email
 
-Field Name: src
-Data Type:  string
-Description: The system that sent the message. May be aliased from more specific fields such as src_host, src_ip, or src_name.	
+    - Field Name: src
+    - Data Type:  string
+    - Description: The system that sent the message. May be aliased from more specific fields such as src_host, src_ip, or src_name.	
 
 ### Normalizando Field Names - Network Traffic
-Field Name: action
-Data Type: string
-Description: The action taken by the network device.	
-Possible Values: allowed, blocked, dropped, unknown
+    - Field Name: action
+    - Data Type: string
+    - Description: The action taken by the network device.	
+    - Possible Values: allowed, blocked, dropped, unknown
 
-Field Name: bytes
-Data Type: number
-Description: Total count of bytes handled by this device/interface (bytes_in + bytes_out).	
+    - Field Name: bytes
+    - Data Type: number
+    - Description: Total count of bytes handled by this device/interface (bytes_in + bytes_out).	
 	
-Field Name: bytes_in
-Data Type: number
-Description: How many bytes this device/interface received.
+    - Field Name: bytes_in
+    - Data Type: number
+    - Description: How many bytes this device/interface received.
 	
-Field Name: bytes_in
-Data Type: number
-Description: How many bytes this device/interface received.
+    - Field Name: bytes_in
+    - Data Type: number
+    - Description: How many bytes this device/interface received.
 
-Field Name: bytes_out
-Data Type: number
-Description: How many bytes this device/interface transmitted.
+    - Field Name: bytes_out
+    - Data Type: number
+    - Description: How many bytes this device/interface transmitted.
 
-Field Name: src
-Data Type: strings
-Description: The source of the network traffic (the client requesting the connection). May be aliased from more specific fields such as src_host, src_ip, or src_name.	
+    - Field Name: src
+    - Data Type: strings
+    - Description: The source of the network traffic (the client requesting the connection). May be aliased from more specific fields such as src_host, src_ip, or src_name.	
 
 ### Normalizando Field Names - Web Data
-Field Name: action
-Data Type: string
-Description: The action taken by the server or proxy.	
+    - Field Name: action
+    - Data Type: string
+    - Description: The action taken by the server or proxy.	
 
-Field Name: duration
-Data Type: number
-Description: The time taken by the proxy event, in milliseconds.	
+    - Field Name: duration
+    - Data Type: number
+    - Description: The time taken by the proxy event, in milliseconds.	
 
-Field Name: http_method
-Data Type: string
-Description: The HTTP method used in the request.
-Possible Values: GET, PUT, POST, DELETE, etc.
+    - Field Name: http_method
+    - Data Type: string
+    - Description: The HTTP method used in the request.
+    - Possible Values: GET, PUT, POST, DELETE, etc.
 
-Field Name: src
-Data Type: string
-Description: The source of the network traffic (the client requesting the connection). 
+    - Field Name: src
+    - Data Type: string
+    - Description: The source of the network traffic (the client requesting the connection). 
 
-Field Name: status
-Data Type: string
-Description: The HTTP response code indicating the status of the proxy request.
-Possible Values: 404, 302, 500, and so on.
+    - Field Name: status
+    - Data Type: string
+    - Description: The HTTP response code indicating the status of the proxy request.
+    - Possible Values: 404, 302, 500, and so on.
 
 #### Splunk CIM Add-on
 * Conjunto de 22 modelos de dados pré-configurados
