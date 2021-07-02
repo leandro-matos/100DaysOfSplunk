@@ -59,10 +59,40 @@ contingency: https://docs.splunk.com/Documentation/SplunkCloud/8.1.2103/SearchRe
 
 analyzefields: https://docs.splunk.com/Documentation/SplunkCloud/8.1.2103/SearchReference/Analyzefields
 
-Develop naming conventions for knowledge objects: https://docs.splunk.com/Documentation/Splunk/8.2.0/Knowledge/Developnamingconventionsforknowledgeobjecttitles
+Develop naming conventions for knowledge objects: https://abre.ai/cYeT
 
-Use tokens in email notifications: https://docs.splunk.com/Documentation/SplunkCloud/8.2.2104/Alert/EmailNotificationTokens
+Use tokens in email notifications: https://abre.ai/cYeU
 
-Token usage in dashboards: https://docs.splunk.com/Documentation/Splunk/8.2.0/Viz/tokens?ref=hk##Predefined_tokens_for_dynamic_drilldown
+Token usage in dashboards: https://abre.ai/cYeV
 
 Managing app and add-on: https://docs.splunk.com/Documentation/Splunk/8.2.1/Admin/Managingappconfigurationsandproperties
+
+Macro: https://docs.splunk.com/Splexicon:Searchmacro
+
+tags and aliases: https://docs.splunk.com/Documentation/Splunk/8.2.0/Knowledge/Abouttagsandaliases
+
+tag field-value: https://docs.splunk.com/Documentation/SplunkCloud/latest/Knowledge/TagandaliasfieldvaluesinSplunkWeb
+
+event types: https://docs.splunk.com/Documentation/Splunk/8.2.0/Knowledge/Abouteventtypes
+
+Add Navigation: https://dev.splunk.com/enterprise/docs/developapps/createapps/addnavsplunkapp/
+
+makeresults: https://docs.splunk.com/Documentation/Splunk/latest/SearchReference/Makeresults
+
+rex: https://docs.splunk.com/Documentation/SplunkCloud/8.2.2105/SearchReference/Rex
+
+windbag: https://the.splunkgallery.com/entries/windbag/
+
+Regular Expression: https://docs.splunk.com/Documentation/Splunk/8.2.1/Knowledge/AboutSplunkregularexpressions
+
+streamstats: https://docs.splunk.com/Documentation/SCS/current/SearchReference/StreamstatsCommandExamples
+
+SPL vs SPL2: https://docs.splunk.com/Documentation/SCS/current/SearchReference/DifferencesbetweenSPLandSPL2
+
+Splunk Dashboard Studio: https://docs.splunk.com/Documentation/Splunk/8.2.1/DashStudio/IntroFrame
+
+Command Types: https://docs.splunk.com/Documentation/Splunk/latest/SearchReference/Commandsbytype
+
+Searches power dashboards and forms: https://docs.splunk.com/Documentation/Splunk/8.2.1/Viz/Savedsearches
+
+
