@@ -41,12 +41,19 @@ sudo ./splunk add monitor /var/log
 
 
 ## Searchs de Exemplos
+```
 index=access_combined status_code=200 | stats count by host, URL, status_code
+```
 
+```
 index="main" sourcetype="access_combined_curso“ | eval KB=bytes/1024
+```
 
+```
 index="main" | eval KB=bytes/1024 | eval http_response=if(status!=200,"Error","OK") | eval port=(random() % 10000) + 1
 | eval connection = clientip.":".port
+```
+
 
 index="curso" sourcetype="access_combined_curso“ | stats avg(bytes) AS "Avg Bytes“
 
