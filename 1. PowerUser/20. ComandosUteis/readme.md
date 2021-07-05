@@ -44,44 +44,63 @@ sudo ./splunk add monitor /var/log
 ```
 
 ### Searchs de Exemplos
+
+Pesquisa Densa
 ```
 index=access_combined status_code=200 | stats count by host, URL, status_code
 ```
 
+Cálculo
 ```
 index="main" sourcetype="access_combined_curso“ | eval KB=bytes/1024
 ```
 
+String de pesquisa combinada:
 ```
-index="main" | eval KB=bytes/1024 | eval http_response=if(status!=200,"Error","OK") | eval port=(random() % 10000) + 1
+index="main" 
+| eval KB=bytes/1024 
+| eval http_response=if(status!=200,"Error","OK") 
+| eval port=(random() % 10000) + 1
 | eval connection = clientip.":".port
 ```
 
+Cálculo e renomeação de campos
 ```
 index="curso" sourcetype="access_combined_curso“ | stats avg(bytes) AS "Avg Bytes“
 ```
 
+Cálculos estátisticos múltiplos:
 ```
 index="curso" | stats avg(bytes) AS "Avg Bytes", sparkline(avg(bytes)) AS BYtes_Trend min(bytes), max(bytes)
 ```
+
+Uso de outro campo:
 ```
 index="curso" | stats avg(bytes) AS "Avg Bytes", sparkline(avg(bytes)) AS BYtes_Trend min(bytes), max(bytes) by clientip
 ```
+
+Estátisticas na linha do tempo:
 ```
 index="curso" sourcetype="access_combined_curso“ | timechart avg(bytes)
 ```
 
+Adição de linha de tendência:
 ```
 index="curso" sourcetype="access_combined_curso“ | timechart avg(bytes) as bytes | trendline sma5(bytes)
 ```
 
+Adição de linha de predição:
 ```
 index="curso" sourcetype="access_combined_curso“ | timechart avg(bytes) as bytes | predict future_timespan=5 bytes
 ```
+
+Enriquecendo com lookups:
 ```
 index="curso" | head 10 | lookup http_response_status_code.csv status 
 | lookup http_response_status_code.csv status OUTPUT status_type | stats count by status_type
 ```
+
+Inception!:
 ```
 index="curso" sourcetype="access_combined_curso“
 | search index="curso" sourcetype="access_combined_curso“
@@ -93,6 +112,7 @@ index="curso" sourcetype="access_combined_curso“
 | sort – count
 ```
 
+Adicionando múltiplas consultas:
 ```
 index="curso" sourcetype="access_combined_curso”
 | timechart span=15s avg(bytes) as avg_bytes
@@ -104,21 +124,21 @@ index="curso" sourcetype="access_combined_curso”
 | fields - stdev_bytes
 ```
 
-```
 Definindo Lat/Lon:
+```
 index="curso" sourcetype="access_combined_curso"
 | iplocation clientip
 ```
 
-```
 Visualizando estatísticas geográficas
+```
 index="curso" sourcetype="access_combined_curso"
 | iplocation clientip
 | geostats sum(bytes) by Country
 ```
 
-```
 Usando choropleths customizados:
+```
 index="curso" sourcetype="access_combined_curso"
 | iplocation clientip
 | stats count by Country
@@ -160,3 +180,44 @@ index="curso" sourcetype="access_combined_curso“
 | eval duration=latest-earliest
 | stats min(duration), max(duration), avg(duration)
 ```
+
+Pesquisando dados mais/menos comuns – 3 eventos mais recentes:
+```
+index=curso sourcetype="st_json_curso"
+| cluster showcount=true t=0.7 labelonly=true
+| table _time, cluster_count, cluster_label, _raw
+| dedup 3 cluster_label
+| sort -cluster_count, cluster_label, - _time
+```
+
+Apresentando um sumário dos campos:
+```
+index=curso sourcetype="access_combined_curso"
+| fields - date* source* time*
+| fieldsummary maxvals=5
+```
+
+Apresentando padrões de co-correlação de campos:
+```
+index=curso sourcetype="access_combined_curso”
+| fields - date* source* time*
+| correlate
+```
+
+Análise de relacionamento entre campos:
+```
+index=curso sourcetype="access_combined_curso“
+| contingency uri status
+```
+
+Identifique predições de campos:
+```
+index=curso sourcetype="st_json_curso“
+| analyzefields classfield=crime_number
+```
+
+Streamstats - Valor estatístico
+```
+index=curso sourcetype="st_json_curso“
+| streamstats count | stats min(count) as begin max(count) as end by action
+``` 
