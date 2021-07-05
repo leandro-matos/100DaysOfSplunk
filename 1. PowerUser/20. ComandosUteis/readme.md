@@ -126,7 +126,7 @@ index="curso" sourcetype="access_combined_curso"
 ```
 
 ```
-Rastreando movimento de objetos:
+* Rastreando movimento de objetos:
 index="curso" sourcetype="access_combined_curso"
 | iplocation clientip
 | rename lat AS latitude, lon AS longitude
@@ -134,8 +134,29 @@ index="curso" sourcetype="access_combined_curso"
 ```
 
 ```
-Rastreando movimento de objetos - 2:
+* Rastreando movimento de objetos - 2:
 | inputlookup locations.csv
 | table _time latitude longitude user
 | sort -_time
+```
+
+```
+Agrupamento de transações:
+index="curso" sourcetype="access_combined_curso“
+| transaction clientip
+```
+
+```
+Calculando a duração das sessões:
+index="curso" sourcetype="access_combined_curso“
+| transaction clientip
+| stats min(duration), max(duration), avg(duration)
+```
+
+```
+Uso de estatísticas – Sempre melhor:
+index="curso" sourcetype="access_combined_curso“
+| stats min(_time) AS earliest, max(_time) AS latest by clientip
+| eval duration=latest-earliest
+| stats min(duration), max(duration), avg(duration)
 ```
