@@ -103,3 +103,39 @@ index="curso" sourcetype="access_combined_curso”
 | eval 2stdv_lower = if('2stdv_lower' < 0, 0, '2stdv_lower’)
 | fields - stdev_bytes
 ```
+
+```
+Definindo Lat/Lon:
+index="curso" sourcetype="access_combined_curso"
+| iplocation clientip
+```
+
+```
+Visualizando estatísticas geográficas
+index="curso" sourcetype="access_combined_curso"
+| iplocation clientip
+| geostats sum(bytes) by Country
+```
+
+```
+Usando choropleths customizados:
+index="curso" sourcetype="access_combined_curso"
+| iplocation clientip
+| stats count by Country
+| geom geo_countries featureIdField="Country“
+```
+
+```
+Rastreando movimento de objetos:
+index="curso" sourcetype="access_combined_curso"
+| iplocation clientip
+| rename lat AS latitude, lon AS longitude
+| table _time, latitude, longitude useragent
+```
+
+```
+Rastreando movimento de objetos - 2:
+| inputlookup locations.csv
+| table _time latitude longitude user
+| sort -_time
+```
