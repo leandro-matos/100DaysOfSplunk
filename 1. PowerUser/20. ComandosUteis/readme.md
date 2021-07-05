@@ -60,11 +60,9 @@ index="curso" sourcetype="access_combined_curso“ | timechart avg(bytes) as byt
 
 index="curso" sourcetype="access_combined_curso“ | timechart avg(bytes) as bytes | predict future_timespan=5 bytes
 
-- Enriquecendo com lookups:
 index="curso" | head 10 | lookup http_response_status_code.csv status 
 | lookup http_response_status_code.csv status OUTPUT status_type | stats count by status_type
 
-- Inception!:
 index="curso" sourcetype="access_combined_curso“
 | search index="curso" sourcetype="access_combined_curso“
 | stats sum(bytes) AS total_bytes by clientip
@@ -74,7 +72,6 @@ index="curso" sourcetype="access_combined_curso“
 | stats count by clientip status uri
 | sort – count
 
-- Adicionando múltiplas consultas:
 index="curso" sourcetype="access_combined_curso”
 | timechart span=15s avg(bytes) as avg_bytes
 | appendcols [ search index="curso” sourcetype="access_combined_curso“
